@@ -6,6 +6,8 @@ extends Node3D
 @export var grid_height: int = 20  # 20 cells along Z axis (40 meters total)
 @export var cell_size: float = 2.0  # 2.0m x 2.0m per grid cell
 
+signal obstacle_changed(cell: Vector2i, is_blocked: bool)
+
 enum CellType {
 	FREE = 0,
 	OBSTACLE = 1,
@@ -49,10 +51,9 @@ func initialize_grid() -> void:
 			grid_costs[cell] = 1.0
 
 	# 2. Mark Rack Obstacle Cells
-	# Racks are centered around X: -14, -4, 4, 14 and Z: -12, -6, 2, 8
 	var rack_x_coords = [-14.0, -4.0, 4.0, 14.0]
 	var rack_z_coords = [-12.0, -6.0, 2.0, 8.0]
-	
+
 	for rx in rack_x_coords:
 		for rz in rack_z_coords:
 			# Racks span 6m along X (-3 to +3) and 1.2m along Z (-0.6 to +0.6)
@@ -111,7 +112,7 @@ func initialize_grid() -> void:
 	choke_points.append(choke_1)
 	choke_points.append(choke_2)
 
-	# AMR Spawn Locations (Clear main aisle points)
+	# AMR Spawn Locations
 	amr_spawn_points.append(grid_to_world(world_to_grid(Vector3(-20.0, 0, 0.0))))
 	amr_spawn_points.append(grid_to_world(world_to_grid(Vector3(-20.0, 0, 6.0))))
 	amr_spawn_points.append(grid_to_world(world_to_grid(Vector3(20.0, 0, 0.0))))
@@ -148,10 +149,21 @@ func set_cell_type(cell: Vector2i, type: CellType) -> void:
 	if is_valid_cell(cell):
 		grid_cells[cell] = type
 
+func set_dynamic_obstacle(cell: Vector2i, is_blocked: bool) -> void:
+	if is_valid_cell(cell):
+		if is_blocked:
+			grid_cells[cell] = CellType.TEMP_OBSTACLE
+			if not dynamic_obstacle_cells.has(cell):
+				dynamic_obstacle_cells.append(cell)
+		else:
+			grid_cells[cell] = CellType.FREE
+			dynamic_obstacle_cells.erase(cell)
+		emit_signal("obstacle_changed", cell, is_blocked)
+
 func get_cell_cost(cell: Vector2i) -> float:
 	var type = get_cell_type(cell)
 	if type == CellType.INTERSECTION or type == CellType.CHOKE_POINT:
-		return 1.8 # Higher cost for intersections & choke points to favor wide aisles
+		return 1.4 # Slightly higher cost for intersections/choke points
 	return grid_costs.get(cell, 1.0)
 
 func get_neighbors(cell: Vector2i, allow_diagonals: bool = false) -> Array[Vector2i]:
@@ -159,7 +171,7 @@ func get_neighbors(cell: Vector2i, allow_diagonals: bool = false) -> Array[Vecto
 	var offsets = [Vector2i(1, 0), Vector2i(-1, 0), Vector2i(0, 1), Vector2i(0, -1)]
 	if allow_diagonals:
 		offsets.append_array([Vector2i(1, 1), Vector2i(-1, 1), Vector2i(1, -1), Vector2i(-1, -1)])
-	
+
 	for offset in offsets:
 		var n_cell = cell + offset
 		if is_walkable(n_cell):

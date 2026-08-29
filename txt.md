@@ -1,985 +1,339 @@
-Absolutely. Assuming by **“Go Dart” you mean Godot**, I would structure the project like this. If you actually mean **Go + Dart**, tell me and I’ll adjust the architecture.
+You should **not jump to P2P coordination yet**. Your next milestone should be **A* pathfinding**, because everything after that depends on having reliable dynamic routes.
 
-# 3D AMR Warehouse Simulation — Execution Plan
+Godot 4.7 already provides `AStarGrid2D`, which is specifically designed for partial 2D grids, supports solid/blocked cells and weighted cells, and supports Manhattan heuristics with orthogonal-only movement. ([Godot Engine documentation][1])
 
-## 1. Overall Goal
+## Do this next: Phase 2 — Step 2
 
-Build a **visually polished 3D smart warehouse** in Godot where 3–5 AMRs operate simultaneously and demonstrate:
+### 1. Create `astar_pathfinder.gd`
 
-* Autonomous movement
-* Multi-robot communication
-* Path planning
-* Collision avoidance
-* Deadlock resolution
-* Task allocation
-* Dynamic re-routing
-* Battery monitoring
-* Real-time fleet dashboard
+Put it here:
 
-The simulation should look like a **real warehouse digital twin**, not like a basic game prototype.
+```text
+scripts/
+├── amr/
+│   ├── amr_controller.gd
+│   └── fleet_manager.gd
+├── grid_manager.gd
+└── astar_pathfinder.gd       ← NEW
+```
+
+Its job should be:
+
+```text
+GridManager
+     ↓
+AStarPathfinder
+     ↓
+Grid Cell Path
+     ↓
+World Position Path
+     ↓
+AMR Controller
+```
+
+Don't put A* logic directly inside `amr_controller.gd`.
 
 ---
 
-# 2. Recommended Technology Stack
+## 2. Connect A* to your existing 25 × 20 grid
 
-### Core
-
-**Godot 4.x**
-
-Use Godot for:
-
-* 3D rendering
-* Physics
-* Robot movement
-* Warehouse environment
-* Animations
-* Camera
-* UI/dashboard
-* Visualization
-
-### Programming
-
-**GDScript** for the majority of the simulation.
-
-You can also use C# if your team is more comfortable with it, but for a 24-hour hackathon, **GDScript is faster to develop in**.
-
-### Communication
-
-For the actual decentralized concept:
+You already have:
 
 ```text
-AMR 1 Agent ←→ AMR 2 Agent
-      ↕              ↕
-AMR 3 Agent ←→ AMR 4 Agent
+25 × 20 cells
+2m cell size
+50m × 40m warehouse
 ```
 
-Implement a lightweight communication layer that exchanges:
+So initialize:
 
-```text
-Robot ID
-Position
-Velocity
-Current Task
-Destination
-Planned Path
-Intent
-Battery
-Status
+```gdscript
+AStarGrid2D
+region = Rect2i(0, 0, 25, 20)
+cell_size = Vector2(2.0, 2.0)
 ```
 
-For the demo, this communication can initially happen inside the simulation. If time permits, move it to actual UDP/WebSocket communication.
+And critically:
+
+```gdscript
+diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
+```
+
+Because your AMRs are supposed to follow warehouse aisles orthogonally. Godot's documentation specifically recommends the Manhattan heuristic with diagonal movement disabled for four-directional grid movement. ([Godot Engine documentation][1])
 
 ---
 
-# 3. Warehouse Environment
+## 3. Convert your existing `GridManager` into the source of truth
 
-Don't make the warehouse unnecessarily complicated.
+Don't duplicate your warehouse map inside the A* script.
 
-Build a clean rectangular warehouse with:
-
-```text
-┌───────────────────────────────────────────┐
-│                                           │
-│   ████    ████    ████    ████           │
-│   ████    ████    ████    ████           │
-│                                           │
-│   ████    ████    ████    ████           │
-│   ████    ████    ████    ████           │
-│                                           │
-│       ↕       ↕       ↕                   │
-│                                           │
-│   PICKUP       INTERSECTION      DROP     │
-│                                           │
-│                         CHARGING          │
-│                         STATION           │
-└───────────────────────────────────────────┘
-```
-
-### Include
-
-* Storage racks
-* Shelves
-* Boxes/pallets
-* Main aisles
-* Narrow aisles
-* Intersections
-* Pickup stations
-* Drop-off stations
-* Charging station
-* Warehouse entrance
-* Loading area
-* Temporary obstacles
-
-### Important
-
-**Use a grid-based warehouse.**
-
-For example:
+You already have:
 
 ```text
-20 × 30 grid
+is_walkable()
+get_cell_type()
+get_cell_cost()
+get_neighbors()
+dynamic_obstacle_cells
 ```
 
-Each cell represents something like:
+Use those.
+
+Conceptually:
 
 ```text
-0 = free
-1 = obstacle
-2 = pickup
-3 = drop
-4 = charging
-5 = intersection
+GridManager
+     │
+     ├── Is this cell walkable?
+     ├── What type is this cell?
+     ├── What does it cost?
+     └── Is there a dynamic obstacle?
+              │
+              ▼
+        AStarPathfinder
+              │
+              ▼
+        Valid grid path
 ```
 
-This will make your path-planning algorithms significantly easier.
+This is important because later, when you introduce dynamic obstacles, **you only modify the grid state**, rather than rewriting the pathfinding system.
 
 ---
 
-# 4. Make the Warehouse Aesthetically Good
+# 4. Implement the first test
 
-This is where your project can stand out.
-
-Don't make everything plain cubes.
-
-Use:
-
-### Environment
-
-* Concrete/industrial floor
-* Metal shelving
-* Cardboard boxes
-* Pallets
-* Industrial walls
-* Warehouse doors
-* Ceiling lights
-* Warning signs
-* Floor markings
-* Yellow/black safety stripes
-
-### Lighting
-
-Use:
-
-* Soft ambient lighting
-* Directional lights
-* Warehouse ceiling lights
-* Soft shadows
-* Slight reflections
-
-Don't make the scene completely dark.
-
-You want the judges to immediately understand:
-
-> **“This is a warehouse simulation.”**
-
----
-
-# 5. AMR Design
-
-Create **one good-looking AMR model** and duplicate it.
-
-Don't spend 4 hours creating five different robots.
-
-Example:
-
-```text
-       ┌─────────────┐
-       │   📦 BOX    │
-       └─────────────┘
-       ┌─────────────┐
-       │    AMR      │
-       │      ●      │
-       └─────────────┘
-          ○       ○
-```
-
-Give the robot:
-
-* Low-profile body
-* Wheels
-* Sensor/LiDAR-looking component
-* Status LED
-* Package on top
-* Robot ID
-
-For example:
+Before connecting it to all four AMRs, make **AMR-01** perform:
 
 ```text
 AMR-01
-AMR-02
-AMR-03
-AMR-04
-```
-
-### Robot status
-
-Use visual indicators:
-
-```text
-Green  → Moving
-Yellow → Waiting
-Red    → Blocked
-Blue   → Charging
-Purple → Re-routing
-```
-
-This makes the simulation understandable without reading the dashboard.
-
----
-
-# 6. Robot Architecture
-
-Each AMR should behave as an **independent agent**.
-
-Create something like:
-
-```text
-AMR
-│
-├── Localization
-│
-├── Task Manager
-│
-├── Path Planner
-│
-├── Collision Detector
-│
-├── Conflict Resolver
-│
-├── Communication Manager
-│
-├── Battery Manager
-│
-└── Movement Controller
-```
-
-The important part is that there isn't one giant:
-
-```text
-CENTRAL ROBOT CONTROLLER
-```
-
-making every decision.
-
-Instead:
-
-```text
-              P2P
-       ┌───────┼───────┐
-       ↓       ↓       ↓
-    AMR 1    AMR 2    AMR 3
-      │        │        │
-   Local     Local    Local
-   Brain     Brain    Brain
-```
-
----
-
-# 7. Path Planning
-
-Start with **A***.
-
-Don't immediately attempt an extremely complex algorithm.
-
-The workflow:
-
-```text
-Robot Position
-      ↓
-Destination
-      ↓
-Read Warehouse Grid
-      ↓
-A* Path Planning
-      ↓
-Generate Waypoints
-      ↓
-Robot Movement
-```
-
-For example:
-
-```text
-AMR 01
-
-Start
   ↓
+Pickup Station
   ↓
-  → → →
+Drop-off Station
+```
+
+The flow should be:
+
+```text
+AMR current position
         ↓
+world_to_grid()
         ↓
-        → Pickup Point
-```
-
-Display the planned path visually.
-
-This is extremely useful for the demo.
-
----
-
-# 8. Decentralized Collision Avoidance
-
-This is the **core of your problem statement**.
-
-Suppose:
-
-```text
-          AMR 1
-            ↓
-            ↓
-      ──────┼──────
-            │
-            ↑
-          AMR 2
-```
-
-Both want the intersection.
-
-Each robot broadcasts:
-
-```text
-AMR 1:
-Position = (10,12)
-Intent = FORWARD
-Next cells = 10,13 → 10,14
-Priority = 4
-```
-
-AMR 2 does the same.
-
-Then:
-
-```text
-AMR 1 detects conflict
+start_cell
         ↓
-Compare priorities
-        ↓
-AMR 1 wins
-        ↓
-AMR 2 WAIT
-        ↓
-AMR 1 crosses
-        ↓
-Intersection released
-        ↓
-AMR 2 continues
-```
-
-This demonstrates **distributed conflict resolution**.
-
----
-
-# 9. Deadlock Resolution
-
-Create a deliberate deadlock scenario for your presentation.
-
-For example:
-
-```text
-          AMR 1 →
-                   ↓
-             ┌─────────┐
-             │         │
-             │ CROSSING│
-             │         │
-             └─────────┘
-                   ↑
-          ← AMR 2
-```
-
-Both robots want the same area.
-
-Your system detects:
-
-```text
-CONFLICT DETECTED
-```
-
-Then determines:
-
-```text
-AMR-01 → PROCEED
-AMR-02 → WAIT
-```
-
-You can show this in the UI.
-
----
-
-# 10. Dynamic Re-routing
-
-This should be one of your major demo scenarios.
-
-Initially:
-
-```text
-AMR-01
-  │
-  ↓
-  ↓
-  ↓
-PICKUP
-```
-
-Then introduce a blockage:
-
-```text
-AMR-01
-  │
-  ↓
-████████
-BLOCKED
-████████
-```
-
-The robot detects:
-
-```text
-Obstacle detected
-```
-
-Then:
-
-```text
-Current path
-     ↓
-Invalid
-     ↓
-Recalculate
-     ↓
 A*
-     ↓
-New path
-     ↓
-Continue
+        ↓
+target_cell
+        ↓
+grid path
+        ↓
+grid_to_world()
+        ↓
+world waypoints
+        ↓
+AMR movement
 ```
 
-Show the old path disappearing and the new path appearing.
+Your existing AMR controller already knows how to move between waypoints, so **don't rewrite the movement system yet**.
 
 ---
 
-# 11. Task Allocation
+# 5. Visualize the A* path
 
-Create multiple tasks:
+This is extremely important for debugging.
 
-```text
-Task 01 → Pickup A → Drop B
-Task 02 → Pickup C → Drop D
-Task 03 → Pickup E → Drop F
-```
-
-Initially:
+When A* calculates a route, draw it in the warehouse using something like:
 
 ```text
-AMR-01 → Task 01
-AMR-02 → Task 02
-AMR-03 → Task 03
+START ● ──●
+         │
+         ●
+         │
+         ●──●──● TARGET
 ```
 
-Now simulate:
+In Godot, you can use a `Line3D`/`ImmediateMesh`-style debug visualization or small glowing markers at grid cells.
 
-```text
-AMR-02
-   ↓
-BLOCKED / UNAVAILABLE
-```
+You should be able to see:
 
-The system should decide:
+**green/cyan line = calculated AMR route**
 
-```text
-Task 02
-   ↓
-Find available AMRs
-   ↓
-Calculate cost
-   ↓
-AMR-03 selected
-   ↓
-Task reassigned
-```
-
-That directly addresses the **task allocation & re-routing** requirement.
+This will immediately tell you whether your grid mapping is correct.
 
 ---
 
-# 12. Battery System
+# 6. Test obstacle avoidance BEFORE P2P
 
-Keep this simple.
-
-Each robot has:
+Once basic A* works, activate your existing:
 
 ```text
-AMR-01
-Battery: 82%
-Status: Moving
+dynamic_obstacle_cells
 ```
-
-Battery decreases with movement.
 
 For example:
 
 ```text
-100%
- ↓
- 90%
- ↓
- 80%
- ↓
- 70%
-```
-
-When battery becomes low:
-
-```text
-Battery < 20%
+             OBSTACLE
+                █
+                █
+AMR ────────────█──────── TARGET
        ↓
-Task completed
+      A*
        ↓
-Navigate to charging station
-       ↓
-Charging
-       ↓
-Battery restored
+AMR ────────┐
+            │
+            └──────────── TARGET
 ```
 
-This gives you another nice dashboard feature.
-
----
-
-# 13. Fleet Dashboard
-
-Don't cover half the screen with UI.
-
-Use a **minimal industrial control dashboard**.
-
-Something like:
+The expected behavior:
 
 ```text
-┌──────────────────────────────────────────────────┐
-│             SMART FLEET CONTROL                  │
-├──────────────────────────────────────────────────┤
-│                                                  │
-│              3D WAREHOUSE                       │
-│                                                  │
-│      🤖01 →───────→                              │
-│              🤖02                                 │
-│                       🤖03                       │
-│                                                  │
-├──────────────────────────────────────────────────┤
-│ FLEET STATUS                                     │
-│                                                  │
-│ AMR-01   MOVING      82%     TASK-04             │
-│ AMR-02   WAITING     64%     TASK-07             │
-│ AMR-03   MOVING      91%     TASK-02             │
-│                                                  │
-│ Active Tasks: 8                                  │
-│ Conflicts: 1                                     │
-│ Collisions: 0                                    │
-│                                                  │
-└──────────────────────────────────────────────────┘
-```
-
----
-
-# 14. Add a "System Metrics" Panel
-
-This is important for proving your **20% improvement**.
-
-Display:
-
-```text
-PERFORMANCE
-
-Traditional Stop & Wait
-Completion Time: 184 sec
-
-Our Decentralized System
-Completion Time: 142 sec
-
-Improvement: 22.8% ↑
-```
-
-Also:
-
-```text
-Collisions       0
-Deadlocks        0
-Tasks Completed  18
-Average Battery  74%
-```
-
-Now you're not just showing a pretty simulation.
-
-You're showing **measurable performance**.
-
----
-
-# 15. Camera System
-
-Implement 3 camera modes.
-
-### 1. Isometric / Overview
-
-Best for judging.
-
-Shows the entire warehouse.
-
-### 2. Follow Camera
-
-Click:
-
-```text
-AMR-01
-```
-
-Camera follows that robot.
-
-### 3. Top View
-
-Useful for demonstrating:
-
-* Paths
-* Intersections
-* Conflicts
-* Re-routing
-
-A camera switch button could be:
-
-```text
-[ OVERVIEW ] [ TOP VIEW ] [ FOLLOW AMR ]
-```
-
----
-
-# 16. Visualizing the Algorithms
-
-This is extremely important.
-
-Don't hide the algorithm.
-
-When AMRs communicate, show:
-
-```text
-AMR-01 ────────── AMR-02
-         P2P
-```
-
-When conflict occurs:
-
-```text
-⚠ CONFLICT
-
-AMR-01 ↔ AMR-03
-Intersection I-04
-
-Resolving...
-```
-
-When re-routing:
-
-```text
-⚠ AISLE BLOCKED
-
-AMR-02
-Old Path ✕
-New Path ✓
-```
-
-This makes the **technical contribution visible to judges**.
-
----
-
-# 17. Suggested Godot Project Structure
-
-Keep the code organized from the beginning.
-
-```text
-project/
-│
-├── scenes/
-│   ├── warehouse.tscn
-│   ├── amr.tscn
-│   ├── rack.tscn
-│   ├── pickup_point.tscn
-│   ├── charging_station.tscn
-│   └── obstacle.tscn
-│
-├── scripts/
-│   ├── amr/
-│   │   ├── amr.gd
-│   │   ├── movement.gd
-│   │   ├── battery.gd
-│   │   └── localization.gd
-│   │
-│   ├── planning/
-│   │   ├── astar.gd
-│   │   ├── path_manager.gd
-│   │   └── rerouting.gd
-│   │
-│   ├── coordination/
-│   │   ├── communication.gd
-│   │   ├── conflict_resolver.gd
-│   │   ├── deadlock_manager.gd
-│   │   └── task_allocator.gd
-│   │
-│   ├── simulation/
-│   │   ├── warehouse_manager.gd
-│   │   └── simulation_manager.gd
-│   │
-│   └── ui/
-│       ├── dashboard.gd
-│       └── metrics.gd
-│
-└── assets/
-    ├── robots/
-    ├── warehouse/
-    ├── racks/
-    ├── boxes/
-    ├── materials/
-    └── sounds/
-```
-
----
-
-# 18. 24-Hour Development Plan
-
-Don't try to build everything simultaneously.
-
-### Phase 1 — 0–2 hrs
-
-**Foundation**
-
-* Create Godot project
-* Create warehouse scene
-* Set camera
-* Create grid
-* Basic lighting
-
-### Phase 2 — 2–5 hrs
-
-**Warehouse**
-
-* Racks
-* Aisles
-* Pickup/drop points
-* Charging station
-* Obstacles
-* Materials/textures
-
-### Phase 3 — 5–8 hrs
-
-**AMRs**
-
-* Robot model
-* Movement
-* Waypoints
-* 3–5 robots
-* Robot IDs
-* Basic animations
-
-### Phase 4 — 8–12 hrs
-
-**Path Planning**
-
-Implement:
-
-* Grid navigation
-* A*
-* Waypoints
-* Dynamic obstacle detection
-* Re-routing
-
-### Phase 5 — 12–16 hrs
-
-**Decentralized Coordination**
-
-Implement:
-
-* Robot state broadcasting
-* Intent sharing
-* Conflict detection
-* Priority mechanism
-* Waiting
-* Deadlock resolution
-
-### Phase 6 — 16–19 hrs
-
-**Task System**
-
-Implement:
-
-* Pickup tasks
-* Drop tasks
-* Task allocation
-* Task reassignment
-* Blocked aisle scenario
-* Battery/charging
-
-### Phase 7 — 19–22 hrs
-
-**Dashboard**
-
-Add:
-
-* Fleet status
-* Battery
-* Current task
-* Conflict notifications
-* Path visualization
-* Performance metrics
-
-### Phase 8 — 22–24 hrs
-
-**Polish + Demo**
-
-Focus on:
-
-* Lighting
-* Camera
-* Animations
-* UI
-* Bug fixes
-* Performance
-* Demo scenarios
-
-**Do not add new major features here.**
-
----
-
-# 19. Your Demo Should Have 4 Scenarios
-
-Instead of simply letting the robots wander around, prepare four scripted scenarios.
-
-### Scenario 1 — Normal Operation
-
-```text
-3 AMRs
-   ↓
-Multiple tasks
-   ↓
-Parallel movement
-   ↓
-Tasks completed
-```
-
-### Scenario 2 — Intersection Conflict
-
-```text
-AMR 1 ──→
-         ╲
-          ╳
-         ╱
-AMR 2 ←─
-```
-
-Show:
-
-> Conflict detected → priority resolution → zero collision.
-
-### Scenario 3 — Blocked Aisle
-
-```text
-Robot → BLOCKED
-             ↓
-       Re-routing
-             ↓
-        Alternate path
-```
-
-### Scenario 4 — Robot Failure
-
-```text
-AMR-02 ❌
+Obstacle OFF
      ↓
-Task reassignment
+Shortest path
+
+Obstacle ON
      ↓
-AMR-03 takes task
+Cell becomes non-walkable
      ↓
-Fleet continues
+A* recalculates
+     ↓
+Alternate path
+     ↓
+AMR continues
 ```
 
-That four-scenario demo will communicate your entire PS very effectively.
+`AStarGrid2D.set_point_solid()` is designed for exactly this kind of temporary pathfinding obstacle; importantly, changing a point's solidity doesn't require rebuilding the entire grid. ([GitHub][2])
 
 ---
 
-# 20. Most Important Design Principle
+# 7. Then upgrade AMR state handling
 
-Your project has **two layers**:
-
-### Layer 1 — Simulation
+You already have:
 
 ```text
-Godot
- ↓
-3D Warehouse
- ↓
-AMRs
- ↓
-Physics
- ↓
-Rendering
+MOVING
+WAITING
+BLOCKED
+CHARGING
+REROUTING
 ```
 
-### Layer 2 — Intelligence
+Make the states actually respond to pathfinding:
 
-```text
-Robot Agents
- ↓
-P2P Communication
- ↓
-Path Planning
- ↓
-Conflict Resolution
- ↓
-Task Allocation
- ↓
-Re-routing
-```
+| Situation                 | AMR state   |
+| ------------------------- | ----------- |
+| Following valid path      | `MOVING`    |
+| No valid path temporarily | `BLOCKED`   |
+| Recalculating route       | `REROUTING` |
+| Waiting for another AMR   | `WAITING`   |
+| Battery low               | `CHARGING`  |
 
-**Keep these two layers separate.**
-
-That way, the 3D graphics are only the visualization of your actual robotics system.
+For now, **don't implement AMR-vs-AMR waiting**. That's the next phase.
 
 ---
 
-## Final architecture
+# 8. Your next milestone should look like this
+
+### Current
 
 ```text
-                         ┌─────────────────────┐
-                         │    GODOT 3D WORLD   │
-                         │                     │
-                         │  Warehouse + AMRs   │
-                         └──────────┬──────────┘
-                                    │
-                    ┌───────────────┼───────────────┐
-                    ↓               ↓               ↓
-                 AMR-01          AMR-02          AMR-03
-                    │               │               │
-              ┌─────┴─────┐   ┌─────┴─────┐   ┌─────┴─────┐
-              │ Local     │   │ Local     │   │ Local     │
-              │ Planner   │   │ Planner   │   │ Planner   │
-              │           │   │           │   │           │
-              │ Conflict  │   │ Conflict  │   │ Conflict  │
-              │ Resolver  │   │ Resolver  │   │ Resolver  │
-              └─────┬─────┘   └─────┬─────┘   └─────┬─────┘
-                    │               │               │
-                    └───────────────┼───────────────┘
-                                    │
-                            P2P COMMUNICATION
-                                    │
-                     ┌──────────────┴──────────────┐
-                     │                             │
-              Task Allocation              Dynamic Re-routing
-                     │                             │
-                     └──────────────┬──────────────┘
-                                    ↓
-                           FLEET DASHBOARD
-                                    │
-                    ┌───────────────┼──────────────┐
-                    ↓               ↓              ↓
-                Positions        Battery        Metrics
-                Tasks            Status          20%+
-                Conflicts        Alerts          Improvement
+4 AMRs
+   ↓
+Fixed waypoint routes
+   ↓
+Movement
 ```
 
-**The key is: build the simulation as a visualization of the decentralized robotics algorithm, not as a 3D game with robotics features added on top.** That distinction will make your project much stronger technically and in the judging/demo.
+### After this phase
+
+```text
+              ┌───────────────┐
+              │ GridManager   │
+              └───────┬───────┘
+                      ↓
+              ┌───────────────┐
+              │ A* Pathfinder │
+              └───────┬───────┘
+                      ↓
+                Valid Path
+                      ↓
+              ┌───────────────┐
+              │ AMR Controller│
+              └───────┬───────┘
+                      ↓
+                  AMR moves
+```
+
+Then:
+
+```text
+              Dynamic Obstacle
+                     ↓
+              GridManager
+                     ↓
+                    A*
+                     ↓
+              Alternate Route
+                     ↓
+                  AMR
+```
+
+---
+
+# 9. Only after that: P2P coordination
+
+Your overall roadmap should now be:
+
+```text
+✅ Phase 1
+Warehouse environment
+
+✅ Phase 1.5
+Grid/navigation architecture
+
+✅ Phase 2.1
+AMR foundation
+
+➡️ Phase 2.2
+A* pathfinding                    ← DO THIS NOW
+
+➡️ Phase 2.3
+Dynamic obstacle detection
+
+➡️ Phase 2.4
+Dynamic re-routing
+
+➡️ Phase 2.5
+Multi-AMR P2P coordination
+
+➡️ Phase 2.6
+Intersection priority
+
+➡️ Phase 2.7
+Deadlock prevention
+
+➡️ Phase 3
+Task allocation
+
+➡️ Phase 4
+Telemetry/dashboard
+
+➡️ Phase 5
+Simulation scenarios + demo
+```
+
+### Most important recommendation
+
+**Don't build the dashboard now. Don't build P2P now. Don't add more 3D assets now.**
+
+Your immediate objective should be:
+
+> **“AMR-01 can dynamically calculate and follow an A* path from any valid grid cell to any registered warehouse POI, while avoiding blocked cells.”**
+
+Once that works reliably, you have the foundation for the genuinely intelligent part of the simulation.
+
+If you want, I can next give you the **exact `astar_pathfinder.gd` implementation and the modifications required in your existing `grid_manager.gd` and `amr_controller.gd`**, designed around the architecture in your progress report.
+
+[1]: https://docs.godotengine.org/en/latest/classes/class_astargrid2d.html?utm_source=chatgpt.com "AStarGrid2D — Godot Engine (latest) documentation in English"
+[2]: https://github.com/godotengine/godot/blob/master/doc/classes/AStarGrid2D.xml?utm_source=chatgpt.com "godot/doc/classes/AStarGrid2D.xml at master · godotengine/godot · GitHub"

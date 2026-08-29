@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=9 format=3]
 
 [ext_resource type="Environment" path="res://materials/environment.tres" id="1_env"]
 [ext_resource type="Script" path="res://scripts/warehouse_builder.gd" id="2_builder"]
 [ext_resource type="Script" path="res://scripts/grid_manager.gd" id="3_grid"]
-[ext_resource type="Script" path="res://scripts/camera_controller.gd" id="4_camera"]
-[ext_resource type="Script" path="res://scripts/hud_overlay.gd" id="5_hud"]
-[ext_resource type="Script" path="res://scripts/amr/fleet_manager.gd" id="6_fleet"]
+[ext_resource type="Script" path="res://scripts/astar_pathfinder.gd" id="4_pathfinder"]
+[ext_resource type="Script" path="res://scripts/camera_controller.gd" id="5_camera"]
+[ext_resource type="Script" path="res://scripts/hud_overlay.gd" id="6_hud"]
+[ext_resource type="Script" path="res://scripts/amr/fleet_manager.gd" id="7_fleet"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.06, 0.09, 0.14, 0.88)
@@ -44,16 +45,19 @@ script = ExtResource("2_builder")
 [node name="GridManager" type="Node3D" parent="Navigation"]
 script = ExtResource("3_grid")
 
+[node name="AStarPathfinder" type="Node3D" parent="Navigation"]
+script = ExtResource("4_pathfinder")
+
 [node name="Zones" type="Node3D" parent="."]
 
 [node name="AMR_Fleet" type="Node3D" parent="."]
-script = ExtResource("6_fleet")
+script = ExtResource("7_fleet")
 
 [node name="Simulation" type="Node3D" parent="."]
 
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(0.707107, -0.40558, 0.579228, 0, 0.819152, 0.573576, -0.707107, -0.40558, 0.579228, 0, 0, 0)
-script = ExtResource("4_camera")
+script = ExtResource("5_camera")
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 38)
@@ -71,7 +75,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("5_hud")
+script = ExtResource("6_hud")
 
 [node name="HeaderPanel" type="PanelContainer" parent="UI/HUD"]
 layout_mode = 1
@@ -93,7 +97,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.9, 0.95, 1, 1)
 theme_override_font_sizes/font_size = 17
-text = "  🏭 3D SMART WAREHOUSE DIGITAL TWIN  |  [AMR FLEET INITIALIZED]"
+text = "  🏭 3D SMART WAREHOUSE DIGITAL TWIN  |  [A* PATHFINDING ACTIVE]"
 vertical_alignment = 1
 
 [node name="PresetsLabel" type="Label" parent="UI/HUD/HeaderPanel/HBox"]
@@ -138,7 +142,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2, 0.8, 1, 1)
 theme_override_font_sizes/font_size = 14
-text = "📊 WAREHOUSE & FLEET METRICS"
+text = "📊 WAREHOUSE & A* METRICS"
 
 [node name="MetricsText" type="RichTextLabel" parent="UI/HUD/InfoPanel/VBox"]
 layout_mode = 2
@@ -147,11 +151,11 @@ theme_override_colors/default_color = Color(0.85, 0.88, 0.92, 1)
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "[color=#64748b]Facility Bounds:[/color] 50m × 40m (2,000 m²)
-[color=#64748b]Navigation Graph:[/color] 25 × 20 Grid (500 Cells @ 2.0m)
-[color=#64748b]Active Fleet:[/color] 4 Autonomous Mobile Robots (AMR 01–04)
-[color=#64748b]AMR Status:[/color] Smooth Waypoint Trajectory & Movement
-[color=#64748b]Functional Zones:[/color] Inbound Pickup, Outbound Dropoff
-[color=#64748b]Fleet Infrastructure:[/color] 4 Charging Docks, 3 Dock Bays"
+[color=#64748b]A* Graph:[/color] AStarGrid2D (25 × 20 Grid @ 2.0m, Orthogonal)
+[color=#64748b]Active Fleet:[/color] 4 AMRs with Dynamic Route Calculation
+[color=#64748b]Dynamic Obstacles:[/color] Press 'O' to Toggle Blockage & Re-route
+[color=#64748b]3D Path Visualizer:[/color] Active Glowing Markers & Beams
+[color=#64748b]State Machine:[/color] MOVING, REROUTING, BLOCKED, CHARGING"
 
 [node name="ControlsHint" type="PanelContainer" parent="UI/HUD"]
 layout_mode = 1
@@ -160,7 +164,7 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -490.0
+offset_left = -560.0
 offset_top = -55.0
 offset_right = -20.0
 offset_bottom = -20.0
@@ -172,7 +176,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 layout_mode = 2
 theme_override_colors/font_color = Color(0.65, 0.72, 0.82, 1)
 theme_override_font_sizes/font_size = 12
-text = "🕹️ WASD / Middle Drag: Pan  |  Right Mouse Drag: Orbit  |  Wheel: Zoom  |  1-4: Presets"
+text = "🕹️ WASD / Middle Drag: Pan | Right Mouse: Orbit | Wheel: Zoom | 1-4: Presets | O: Toggle Obstacle"
 
 [connection signal="pressed" from="UI/HUD/HeaderPanel/HBox/BtnOverview" to="UI/HUD" method="_on_overview_btn_pressed"]
 [connection signal="pressed" from="UI/HUD/HeaderPanel/HBox/BtnTopDown" to="UI/HUD" method="_on_topdown_btn_pressed"]
