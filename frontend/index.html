@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Edge-AI AMR Fleet - Interactive Telemetry</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Bar -->
+        <header class="header">
+            <div class="header-title">
+                <h1>Autonomous Edge-AI AMR Fleet Telemetry</h1>
+                <span class="badge neon-blue">Decentralized P2P Network</span>
+            </div>
+            
+            <div class="header-controls">
+                <!-- Speed Toggles -->
+                <div class="speed-group">
+                    <span class="speed-label">Speed:</span>
+                    <button id="btnSpeedNormal" class="speed-btn">1x</button>
+                    <button id="btnSpeedFast" class="speed-btn active">Fast ⚡</button>
+                    <button id="btnSpeedTurbo" class="speed-btn">Turbo 🚀</button>
+                </div>
+                <!-- Status Dot -->
+                <div class="connection-status">
+                    <span class="status-dot disconnected" id="statusDot"></span>
+                    <span id="statusText">Disconnected</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Grid -->
+        <main class="main-content">
+            <!-- Left Panel: 2D Warehouse Map Visualizer -->
+            <section class="simulation-card">
+                <div class="card-header">
+                    <h2>2D Warehouse Floor Map (30m × 30m)</h2>
+                    <div class="legend">
+                        <span class="legend-item"><span class="color-box wall"></span> Wall/Shelf</span>
+                        <span class="legend-item"><span class="color-box green"></span> Clear</span>
+                        <span class="legend-item"><span class="color-box yellow"></span> Medium</span>
+                        <span class="legend-item"><span class="color-box red"></span> Congested</span>
+                    </div>
+                </div>
+
+                <!-- Tool Selector Bar -->
+                <div class="tool-selector-bar">
+                    <button id="btnAddMachineInstant" class="btn primary-glow lg">+ Add AMR Machine</button>
+                    <button id="btnAddMachine2Click" class="btn secondary">+ Add Custom (2-Click)</button>
+                    <button id="btnSetStart" class="tool-btn active-mode">Place Start (S)</button>
+                    <button id="btnSetGoal" class="tool-btn">Place End (G)</button>
+                    <button id="btnToggleObstacle" class="tool-btn obstacle-mode">Draw Wall 🧱</button>
+                </div>
+
+                <!-- Live Prompt Banner -->
+                <div id="instructionBanner" class="instruction-banner">
+                    <span>💡 Click <b>+ Add AMR Machine</b> to spawn machines with crossing paths, or use 2-Click Custom mode.</span>
+                </div>
+                
+                <div class="canvas-wrapper">
+                    <canvas id="warehouseCanvas" width="600" height="600"></canvas>
+                </div>
+            </section>
+
+            <!-- Right Panel: Manage Machines, Metrics & Logs -->
+            <section class="controls-card">
+                <!-- Manage Active AMR Machines -->
+                <div class="panel-section">
+                    <h3>AMR Machine Management</h3>
+                    <div class="control-row style-select">
+                        <label for="selectRobot">Target Machine:</label>
+                        <select id="selectRobot" class="select-input">
+                            <option value="">No machines added yet. Click + Add AMR Machine</option>
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button id="btnRemoveRobot" class="btn danger-sm">Remove Selected Machine</button>
+                        <button id="btnClearAll" class="btn secondary">Clear All Machines</button>
+                    </div>
+                </div>
+
+                <!-- Traffic Simulations & Reset Controls -->
+                <div class="panel-section">
+                    <h3>Traffic Presets & Reset</h3>
+                    <div class="button-group wrap">
+                        <button id="btnSimulateCongestion" class="btn primary">Simulate Corridor Traffic</button>
+                        <button id="btnClearCongestion" class="btn success">Clear Traffic / Solve</button>
+                        <button id="btnResetMap" class="btn secondary">Reset Simulation</button>
+                    </div>
+                </div>
+
+                <!-- Live Route Metrics Card -->
+                <div class="panel-section">
+                    <h3>Live Route Metrics (Distance vs ETA)</h3>
+                    <div id="metricsPanel" class="metrics-card">
+                        <div class="metric-row">
+                            <span class="metric-tag current">Current Path</span>
+                            <span id="lblCurrentRoute" class="metric-val">Distance: -- m | ETA: -- s</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-tag alternate">Alternate Path</span>
+                            <span id="lblAlternateRoute" class="metric-val">Distance: -- m | ETA: -- s</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Active Fleet Overview -->
+                <div class="panel-section">
+                    <h3>Active Fleet Status</h3>
+                    <div id="fleetOverview" class="fleet-list">
+                        <div class="empty-msg">No active AMRs in fleet. Click "+ Add AMR Machine" to spawn one.</div>
+                    </div>
+                </div>
+
+                <!-- Decision Logs -->
+                <div class="panel-section flex-grow">
+                    <h3>Explainable Decision Events</h3>
+                    <div id="decisionLogs" class="log-container">
+                        <div class="log-entry info">System ready. Click "+ Add AMR Machine" to launch crossing paths.</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
