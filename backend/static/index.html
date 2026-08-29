@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMR Fleet Control Center | Decentralized Edge Robotics</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Left Navigation Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">🏭</div>
+        <div>
+          <div class="brand-title">AMR FLEET OPS</div>
+          <div class="brand-subtitle">Decentralized Edge Hub</div>
+        </div>
+      </div>
+
+      <ul class="nav-links">
+        <li class="nav-item active" data-page="overview" onclick="switchPage('overview')">
+          <span>📊</span> Overview
+        </li>
+        <li class="nav-item" data-page="fleet" onclick="switchPage('fleet')">
+          <span>🤖</span> Fleet Status
+        </li>
+        <li class="nav-item" data-page="create_task" onclick="switchPage('create_task')">
+          <span>📦</span> Create Task
+        </li>
+        <li class="nav-item" data-page="auctions" onclick="switchPage('auctions')">
+          <span>⚡</span> Live Auctions
+        </li>
+        <li class="nav-item" data-page="tasks" onclick="switchPage('tasks')">
+          <span>📋</span> All Tasks
+        </li>
+        <li class="nav-item" data-page="events" onclick="switchPage('events')">
+          <span>📡</span> Live Events
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <div><strong>P2P NETWORK:</strong> <span style="color:#4ade80">● ACTIVE</span></div>
+        <div style="margin-top:4px;"><strong>CENTRAL SERVER:</strong> <span style="color:#38bdf8">NONE</span></div>
+        <div style="margin-top:4px;">WebSocket: <span id="ws-status" style="color:#fbbf24">Connecting...</span></div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-wrapper">
+      <header class="top-header">
+        <div class="page-title-box">
+          <h1 class="page-title" id="page-heading">Fleet Overview</h1>
+          <div class="system-badge">
+            <div class="dot"></div>
+            <span>Decentralized Autonomous Fleet</span>
+          </div>
+        </div>
+
+        <div class="header-meta">
+          <div>Robots: <strong id="kpi-online-count" style="color:#4ade80">4 / 4 Online</strong></div>
+          <div>Active Tasks: <strong id="kpi-active-count" style="color:#38bdf8">0</strong></div>
+          <div id="live-clock" style="font-family:monospace;">00:00:00</div>
+        </div>
+      </header>
+
+      <main class="content-area">
+        <!-- ================= PAGE: OVERVIEW ================= -->
+        <div id="page-overview" class="page-section">
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-label">Active Edge Robots</div>
+              <div class="kpi-value" id="card-robots">4 / 4</div>
+              <div class="kpi-sub">P2P Mesh Connected</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Active Tasks</div>
+              <div class="kpi-value" id="card-active-tasks">0</div>
+              <div class="kpi-sub">Executing in Warehouse</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Completed Jobs</div>
+              <div class="kpi-value" id="card-completed-tasks">0</div>
+              <div class="kpi-sub">Delivered Successfully</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-label">Coordination Mode</div>
+              <div class="kpi-value" style="font-size:18px; color:#38bdf8;">P2P UDP</div>
+              <div class="kpi-sub">Zero Central Allocator</div>
+            </div>
+          </div>
+
+          <div style="display:grid; grid-template-columns: 2fr 1fr; gap:20px;">
+            <div class="section-card">
+              <div class="card-header">
+                <div class="card-title">🤖 Active AMR Fleet Telemetry</div>
+                <button class="btn-secondary" onclick="switchPage('fleet')">View All</button>
+              </div>
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>ROBOT</th>
+                    <th>STATUS</th>
+                    <th>BATTERY</th>
+                    <th>CURRENT TASK</th>
+                    <th>POSITION</th>
+                  </tr>
+                </thead>
+                <tbody id="overview-fleet-tbody">
+                  <!-- Injected via JS -->
+                </tbody>
+              </table>
+            </div>
+
+            <div class="section-card">
+              <div class="card-header">
+                <div class="card-title">📡 Live Event Stream</div>
+                <button class="btn-secondary" onclick="switchPage('events')">Full Stream</button>
+              </div>
+              <div class="event-feed" id="overview-event-feed" style="max-height: 250px;">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= PAGE: FLEET ================= -->
+        <div id="page-fleet" class="page-section" style="display:none;">
+          <div class="section-card">
+            <div class="card-header">
+              <div class="card-title">🤖 Autonomous Mobile Robot Fleet (4 Nodes)</div>
+              <div style="color:var(--text-muted); font-size:12px;">P2P UDP Mesh | Independent Edge Intelligence</div>
+            </div>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>ROBOT ID</th>
+                  <th>NETWORK STATE</th>
+                  <th>OPERATING STATUS</th>
+                  <th>BATTERY</th>
+                  <th>VELOCITY</th>
+                  <th>GRID POSITION</th>
+                  <th>CURRENT TASK</th>
+                  <th>CONTROLS</th>
+                </tr>
+              </thead>
+              <tbody id="fleet-tbody">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ================= PAGE: CREATE TASK ================= -->
+        <div id="page-create_task" class="page-section" style="display:none;">
+          <div style="display:grid; grid-template-columns: 1.2fr 1fr; gap:24px;">
+            <div class="section-card">
+              <div class="card-header">
+                <div class="card-title">📦 Create Warehouse Transport Job</div>
+              </div>
+              <form id="create-task-form" onsubmit="handleCreateTaskSubmit(event)">
+                <div class="form-group">
+                  <label class="form-label">Task Identifier</label>
+                  <input type="text" id="input-task-id" class="form-control" value="T-001" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Pickup Location (Warehouse POI)</label>
+                  <select id="input-pickup" class="form-control">
+                    <option value="3,16">Inbound Pickup Station A3 [3, 16]</option>
+                    <option value="2,10">Loading Dock L2 [2, 10]</option>
+                    <option value="2,5">Loading Dock L1 [2, 5]</option>
+                    <option value="5,17">Aisle 01 North [5, 17]</option>
+                    <option value="10,17">Aisle 02 North [10, 17]</option>
+                    <option value="21,2">Charging Dock C1 [21, 2]</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Dropoff Destination (Warehouse POI)</label>
+                  <select id="input-dropoff" class="form-control">
+                    <option value="3,4">Outbound Dropoff Station D8 [3, 4]</option>
+                    <option value="14,2">Aisle 03 South [14, 2]</option>
+                    <option value="19,2">Aisle 04 South [19, 2]</option>
+                    <option value="21,4">Charging Dock C3 [21, 4]</option>
+                    <option value="2,15">Loading Dock L3 [2, 15]</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Priority Level</label>
+                  <select id="input-priority" class="form-control">
+                    <option value="5">HIGH (Priority: 5)</option>
+                    <option value="10">CRITICAL (Priority: 10)</option>
+                    <option value="3">NORMAL (Priority: 3)</option>
+                    <option value="1">LOW (Priority: 1)</option>
+                  </select>
+                </div>
+
+                <div style="background:#0f2038; border:1px solid #1e3a5f; padding:12px; border-radius:6px; margin-bottom:16px; font-size:12px; color:#93c5fd;">
+                  🤖 <strong>Decentralized Allocation:</strong> The user does not assign a robot. The fleet will autonomously auction this task across the P2P network and select the best AMR based on distance, congestion, battery, and workload.
+                </div>
+
+                <button type="submit" class="btn-primary" style="width:100%;">🚀 BROADCAST & AUCTION TASK</button>
+              </form>
+            </div>
+
+            <div class="section-card">
+              <div class="card-header">
+                <div class="card-title">⚡ Live Auction Monitor</div>
+              </div>
+              <div id="create-auction-status" style="font-size:13px; color:var(--text-muted);">
+                Submit a task to observe the real-time P2P auction matrix.
+              </div>
+              <div id="create-auction-table-box" style="margin-top:16px; display:none;">
+                <table class="custom-table">
+                  <thead>
+                    <tr>
+                      <th>ROBOT</th>
+                      <th>DIST</th>
+                      <th>BATT</th>
+                      <th>SCORE</th>
+                    </tr>
+                  </thead>
+                  <tbody id="create-auction-tbody"></tbody>
+                </table>
+              </div>
+              <div id="create-winner-box" class="winner-box" style="display:none;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= PAGE: AUCTIONS ================= -->
+        <div id="page-auctions" class="page-section" style="display:none;">
+          <div class="section-card">
+            <div class="card-header">
+              <div class="card-title">⚡ Decentralized Task Auction Matrix</div>
+            </div>
+            <div id="auctions-container">
+              <div style="color:var(--text-muted);">No active auctions in progress. Create a task to initiate a P2P auction.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= PAGE: TASKS ================= -->
+        <div id="page-tasks" class="page-section" style="display:none;">
+          <div class="section-card">
+            <div class="card-header">
+              <div class="card-title">📋 Warehouse Tasks Log</div>
+              <button class="btn-primary" onclick="switchPage('create_task')">+ New Task</button>
+            </div>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>TASK ID</th>
+                  <th>PICKUP</th>
+                  <th>DROPOFF</th>
+                  <th>PRIORITY</th>
+                  <th>STATUS</th>
+                  <th>ASSIGNED AMR</th>
+                  <th>ROUND</th>
+                  <th>WINNER SCORE</th>
+                </tr>
+              </thead>
+              <tbody id="tasks-tbody">
+                <!-- Injected via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ================= PAGE: EVENTS ================= -->
+        <div id="page-events" class="page-section" style="display:none;">
+          <div class="section-card">
+            <div class="card-header">
+              <div class="card-title">📡 Real-Time Fleet & Consensus Event Feed</div>
+            </div>
+            <div class="event-feed" id="full-event-feed" style="max-height:600px;">
+              <!-- Injected via JS -->
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
