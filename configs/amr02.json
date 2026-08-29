@@ -1,0 +1,22 @@
+{
+  "robot_id": "AMR-02",
+  "initial_position": [22.0, 10.0],
+  "initial_heading": 180.0,
+  "network_port": 5002,
+  "frontend_port": 8002,
+  "broadcast_host": "127.0.0.1",
+  "peer_endpoints": [
+    ["127.0.0.1", 5001],
+    ["127.0.0.1", 5002],
+    ["127.0.0.1", 5003],
+    ["127.0.0.1", 5004]
+  ],
+  "max_speed": 1.5,
+  "battery_capacity": 100.0,
+  "battery_drain_rate": 0.04,
+  "safety_distance": 1.2,
+  "loop_rate_hz": 10.0,
+  "grid_width": 25,
+  "grid_height": 20,
+  "default_goal": [2.0, 10.0]
+}
