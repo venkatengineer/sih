@@ -20,6 +20,7 @@ var current_distance: float = 38.0
 var is_orbiting: bool = false
 var is_panning: bool = false
 var last_mouse_pos: Vector2 = Vector2.ZERO
+var tracked_node: Node3D = null
 
 @onready var camera: Camera3D = $Camera3D
 
@@ -27,15 +28,28 @@ func _ready() -> void:
 	target_position = global_position
 	set_view_overview()
 
+func focus_node(node: Node3D) -> void:
+	tracked_node = node
+	if tracked_node:
+		target_position = tracked_node.global_position
+		target_distance = 18.0
+		target_pitch = deg_to_rad(-30.0)
+
+func clear_tracking() -> void:
+	tracked_node = null
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		# Mouse Drag for Orbit (Right Click or Left Click on viewport)
 		if event.button_index == MOUSE_BUTTON_RIGHT or event.button_index == MOUSE_BUTTON_LEFT:
 			is_orbiting = event.pressed
 			last_mouse_pos = event.position
+			if event.pressed:
+				clear_tracking()
 		elif event.button_index == MOUSE_BUTTON_MIDDLE:
 			is_panning = event.pressed
 			last_mouse_pos = event.position
+			if event.pressed:
+				clear_tracking()
 		
 		# Mouse Wheel Zoom
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
@@ -68,7 +82,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			set_view_charging()
 
 func _process(delta: float) -> void:
-	# WASD & Arrow Key Panning (Checked continuously in _process)
+	if tracked_node and is_instance_valid(tracked_node):
+		target_position = tracked_node.global_position
+
+	# WASD & Arrow Key Panning
 	var move_vec = Vector3.ZERO
 	var right = basis.x
 	var forward = Vector3(right.z, 0, -right.x).normalized()
@@ -83,6 +100,7 @@ func _process(delta: float) -> void:
 		move_vec += right
 
 	if move_vec.length_squared() > 0.001:
+		clear_tracking()
 		target_position += move_vec.normalized() * pan_speed * delta
 
 	# Smooth camera transitions
@@ -97,24 +115,28 @@ func _process(delta: float) -> void:
 		camera.position = Vector3(0, 0, current_distance)
 
 func set_view_overview() -> void:
+	clear_tracking()
 	target_position = Vector3(0, 0, 0)
 	target_yaw = deg_to_rad(-45.0)
 	target_pitch = deg_to_rad(-35.0)
 	target_distance = 38.0
 
 func set_view_topdown() -> void:
+	clear_tracking()
 	target_position = Vector3(0, 0, 0)
 	target_yaw = deg_to_rad(0.0)
 	target_pitch = deg_to_rad(-88.5)
 	target_distance = 45.0
 
 func set_view_pickup_drop() -> void:
+	clear_tracking()
 	target_position = Vector3(-12, 0, 10)
 	target_yaw = deg_to_rad(-30.0)
 	target_pitch = deg_to_rad(-25.0)
 	target_distance = 18.0
 
 func set_view_charging() -> void:
+	clear_tracking()
 	target_position = Vector3(14, 0, -10)
 	target_yaw = deg_to_rad(45.0)
 	target_pitch = deg_to_rad(-25.0)

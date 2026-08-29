@@ -1,339 +1,506 @@
-You should **not jump to P2P coordination yet**. Your next milestone should be **A* pathfinding**, because everything after that depends on having reliable dynamic routes.
+For **UI improvements**, I would focus on making your current HUD look like a **real industrial AMR Fleet Control Center**, rather than adding more generic panels.
 
-Godot 4.7 already provides `AStarGrid2D`, which is specifically designed for partial 2D grids, supports solid/blocked cells and weighted cells, and supports Manhattan heuristics with orthogonal-only movement. ([Godot Engine documentation][1])
+Your 3D warehouse is already visually detailed. The UI should now communicate **operations, intelligence, and system status**.
 
-## Do this next: Phase 2 — Step 2
+## 1. Redesign the main HUD
 
-### 1. Create `astar_pathfinder.gd`
-
-Put it here:
+Instead of one large telemetry overlay, use a structured layout:
 
 ```text
-scripts/
-├── amr/
-│   ├── amr_controller.gd
-│   └── fleet_manager.gd
-├── grid_manager.gd
-└── astar_pathfinder.gd       ← NEW
+┌─────────────────────────────────────────────────────────────┐
+│ 🏭 SMART WAREHOUSE       ● SYSTEM ONLINE       4 AMRs      │
+├──────────────┬──────────────────────────────────────────────┤
+│              │                                              │
+│ FLEET        │                                              │
+│              │              3D WAREHOUSE                    │
+│ AMR-01  🟢   │                                              │
+│ AMR-02  🟢   │                  🤖 →                         │
+│ AMR-03  🟡   │             🤖                                │
+│ AMR-04  🔴   │                                              │
+│              │                                              │
+├──────────────┤                                              │
+│ TASKS        │                                              │
+│ Active   04  │                                              │
+│ Complete 42  │                                              │
+│              │                                              │
+├──────────────┴──────────────────────────────────────────────┤
+│ 🧠 EVENT: AMR-02 rerouted around blocked Aisle 03          │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-Its job should be:
-
-```text
-GridManager
-     ↓
-AStarPathfinder
-     ↓
-Grid Cell Path
-     ↓
-World Position Path
-     ↓
-AMR Controller
-```
-
-Don't put A* logic directly inside `amr_controller.gd`.
+Keep the **3D scene dominant**. The UI should frame it, not cover it.
 
 ---
 
-## 2. Connect A* to your existing 25 × 20 grid
+# 2. AMR Fleet Panel
 
-You already have:
+When the user clicks an AMR, open a detailed panel.
 
 ```text
-25 × 20 cells
-2m cell size
-50m × 40m warehouse
+┌──────────────────────────┐
+│ AMR-02            🟢     │
+│ MOVING                   │
+├──────────────────────────┤
+│ Battery        78%       │
+│ Speed          1.2 m/s   │
+│ Cell           C12       │
+│ Task           TASK-014  │
+│ Destination    PICKUP-02 │
+│ ETA            00:14     │
+├──────────────────────────┤
+│ ROUTE                    │
+│ ████████████░░  72%     │
+├──────────────────────────┤
+│ [VIEW ROUTE]             │
+│ [FOLLOW AMR]             │
+└──────────────────────────┘
 ```
 
-So initialize:
+### Important
 
-```gdscript
-AStarGrid2D
-region = Rect2i(0, 0, 25, 20)
-cell_size = Vector2(2.0, 2.0)
+Make the AMR in the 3D world **selectable**.
+
+Click:
+
+```text
+🤖 AMR-02
 ```
 
-And critically:
+→ panel opens.
 
-```gdscript
-diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
+Click another robot:
+
+```text
+🤖 AMR-04
 ```
 
-Because your AMRs are supposed to follow warehouse aisles orthogonally. Godot's documentation specifically recommends the Manhattan heuristic with diagonal movement disabled for four-directional grid movement. ([Godot Engine documentation][1])
+→ panel updates.
+
+This makes the simulation feel interactive rather than like a video.
 
 ---
 
-## 3. Convert your existing `GridManager` into the source of truth
+# 3. Top Status Bar
 
-Don't duplicate your warehouse map inside the A* script.
-
-You already have:
+Create a thin persistent top bar:
 
 ```text
-is_walkable()
-get_cell_type()
-get_cell_cost()
-get_neighbors()
-dynamic_obstacle_cells
+🏭 SMART WAREHOUSE
+────────────────────────────────────────────────
+
+● SYSTEM ONLINE
+
+AMRs       4
+ACTIVE     3
+WAITING    1
+BLOCKED    0
+
+TASKS      06
+COMPLETED  42
+
+BATTERY    76%
 ```
 
-Use those.
-
-Conceptually:
-
-```text
-GridManager
-     │
-     ├── Is this cell walkable?
-     ├── What type is this cell?
-     ├── What does it cost?
-     └── Is there a dynamic obstacle?
-              │
-              ▼
-        AStarPathfinder
-              │
-              ▼
-        Valid grid path
-```
-
-This is important because later, when you introduce dynamic obstacles, **you only modify the grid state**, rather than rewriting the pathfinding system.
+Use **small indicators rather than huge cards**.
 
 ---
 
-# 4. Implement the first test
+# 4. Add a real-time event feed
 
-Before connecting it to all four AMRs, make **AMR-01** perform:
+This is one of the highest-value UI additions.
 
-```text
-AMR-01
-  ↓
-Pickup Station
-  ↓
-Drop-off Station
-```
-
-The flow should be:
+Bottom-right:
 
 ```text
-AMR current position
-        ↓
-world_to_grid()
-        ↓
-start_cell
-        ↓
-A*
-        ↓
-target_cell
-        ↓
-grid path
-        ↓
-grid_to_world()
-        ↓
-world waypoints
-        ↓
-AMR movement
+┌────────────────────────────────────┐
+│ LIVE EVENTS                        │
+├────────────────────────────────────┤
+│ 00:42  AMR-02  REROUTING           │
+│ 00:39  AMR-01  TASK COMPLETED      │
+│ 00:35  AMR-03  LOW BATTERY         │
+│ 00:31  SYSTEM  OBSTACLE DETECTED   │
+│ 00:27  AMR-04  TASK ASSIGNED       │
+└────────────────────────────────────┘
 ```
 
-Your existing AMR controller already knows how to move between waypoints, so **don't rewrite the movement system yet**.
+Events should appear dynamically.
+
+This gives the jury immediate feedback about what's happening inside the simulation.
 
 ---
 
-# 5. Visualize the A* path
+# 5. Add an AI Decision panel
 
-This is extremely important for debugging.
-
-When A* calculates a route, draw it in the warehouse using something like:
+This is probably your **best UI improvement**.
 
 ```text
-START ● ──●
-         │
-         ●
-         │
-         ●──●──● TARGET
+┌─────────────────────────────────────┐
+│ 🧠 FLEET DECISION ENGINE            │
+├─────────────────────────────────────┤
+│ AMR-02                              │
+│                                     │
+│ ⚠ Congestion detected               │
+│                                     │
+│ Evaluating routes...                │
+│                                     │
+│ Route A     Cost 34                 │
+│ Route B     Cost 21   ✓ SELECTED    │
+│ Route C     Cost 29                 │
+│                                     │
+│ Reason                              │
+│ Lower congestion + shorter ETA      │
+└─────────────────────────────────────┘
 ```
 
-In Godot, you can use a `Line3D`/`ImmediateMesh`-style debug visualization or small glowing markers at grid cells.
-
-You should be able to see:
-
-**green/cyan line = calculated AMR route**
-
-This will immediately tell you whether your grid mapping is correct.
+Even if your algorithm is relatively simple, **making its decisions visible** greatly improves the perceived intelligence of the system.
 
 ---
 
-# 6. Test obstacle avoidance BEFORE P2P
+# 6. Add a bottom control bar
 
-Once basic A* works, activate your existing:
-
-```text
-dynamic_obstacle_cells
-```
-
-For example:
+Instead of scattering controls around the screen:
 
 ```text
-             OBSTACLE
-                █
-                █
-AMR ────────────█──────── TARGET
-       ↓
-      A*
-       ↓
-AMR ────────┐
-            │
-            └──────────── TARGET
-```
-
-The expected behavior:
-
-```text
-Obstacle OFF
-     ↓
-Shortest path
-
-Obstacle ON
-     ↓
-Cell becomes non-walkable
-     ↓
-A* recalculates
-     ↓
-Alternate path
-     ↓
-AMR continues
-```
-
-`AStarGrid2D.set_point_solid()` is designed for exactly this kind of temporary pathfinding obstacle; importantly, changing a point's solidity doesn't require rebuilding the entire grid. ([GitHub][2])
-
----
-
-# 7. Then upgrade AMR state handling
-
-You already have:
-
-```text
-MOVING
-WAITING
-BLOCKED
-CHARGING
-REROUTING
-```
-
-Make the states actually respond to pathfinding:
-
-| Situation                 | AMR state   |
-| ------------------------- | ----------- |
-| Following valid path      | `MOVING`    |
-| No valid path temporarily | `BLOCKED`   |
-| Recalculating route       | `REROUTING` |
-| Waiting for another AMR   | `WAITING`   |
-| Battery low               | `CHARGING`  |
-
-For now, **don't implement AMR-vs-AMR waiting**. That's the next phase.
-
----
-
-# 8. Your next milestone should look like this
-
-### Current
-
-```text
-4 AMRs
-   ↓
-Fixed waypoint routes
-   ↓
-Movement
-```
-
-### After this phase
-
-```text
-              ┌───────────────┐
-              │ GridManager   │
-              └───────┬───────┘
-                      ↓
-              ┌───────────────┐
-              │ A* Pathfinder │
-              └───────┬───────┘
-                      ↓
-                Valid Path
-                      ↓
-              ┌───────────────┐
-              │ AMR Controller│
-              └───────┬───────┘
-                      ↓
-                  AMR moves
+┌─────────────────────────────────────────────────────────────┐
+│ [▶ PLAY] [Ⅱ PAUSE] [↻ RESET] │ SPEED 1× 2× 4× │ [SCENARIOS]│
+└─────────────────────────────────────────────────────────────┘
 ```
 
 Then:
 
 ```text
-              Dynamic Obstacle
-                     ↓
-              GridManager
-                     ↓
-                    A*
-                     ↓
-              Alternate Route
-                     ↓
-                  AMR
+[OVERVIEW] [TOP VIEW] [STATIONS] [CHARGING]
 ```
+
+This makes the demo much easier to control.
 
 ---
 
-# 9. Only after that: P2P coordination
+# 7. Add a "Scenario" button
 
-Your overall roadmap should now be:
+For the hackathon, this is extremely useful.
 
 ```text
-✅ Phase 1
-Warehouse environment
-
-✅ Phase 1.5
-Grid/navigation architecture
-
-✅ Phase 2.1
-AMR foundation
-
-➡️ Phase 2.2
-A* pathfinding                    ← DO THIS NOW
-
-➡️ Phase 2.3
-Dynamic obstacle detection
-
-➡️ Phase 2.4
-Dynamic re-routing
-
-➡️ Phase 2.5
-Multi-AMR P2P coordination
-
-➡️ Phase 2.6
-Intersection priority
-
-➡️ Phase 2.7
-Deadlock prevention
-
-➡️ Phase 3
-Task allocation
-
-➡️ Phase 4
-Telemetry/dashboard
-
-➡️ Phase 5
-Simulation scenarios + demo
+┌─────────────────────┐
+│ DEMO SCENARIOS      │
+├─────────────────────┤
+│ ▶ Normal Operation  │
+│ ▶ Block Aisle       │
+│ ▶ Robot Conflict    │
+│ ▶ Low Battery       │
+│ ▶ AMR Failure       │
+│ ▶ Heavy Traffic     │
+│ ▶ Emergency Stop    │
+└─────────────────────┘
 ```
 
-### Most important recommendation
+You can trigger impressive situations instantly.
 
-**Don't build the dashboard now. Don't build P2P now. Don't add more 3D assets now.**
+---
 
-Your immediate objective should be:
+# 8. Add warehouse KPI strip
 
-> **“AMR-01 can dynamically calculate and follow an A* path from any valid grid cell to any registered warehouse POI, while avoiding blocked cells.”**
+When no AMR is selected, show:
 
-Once that works reliably, you have the foundation for the genuinely intelligent part of the simulation.
+```text
+┌─────────────────────────────────────────────────────────────┐
+│ FLEET UTILIZATION  87% │ AVG ETA 18s │ TASKS 42 │ COLLISIONS 0 │
+└─────────────────────────────────────────────────────────────┘
+```
 
-If you want, I can next give you the **exact `astar_pathfinder.gd` implementation and the modifications required in your existing `grid_manager.gd` and `amr_controller.gd`**, designed around the architecture in your progress report.
+This makes your simulation feel like a monitoring system.
 
-[1]: https://docs.godotengine.org/en/latest/classes/class_astargrid2d.html?utm_source=chatgpt.com "AStarGrid2D — Godot Engine (latest) documentation in English"
-[2]: https://github.com/godotengine/godot/blob/master/doc/classes/AStarGrid2D.xml?utm_source=chatgpt.com "godot/doc/classes/AStarGrid2D.xml at master · godotengine/godot · GitHub"
+---
+
+# 9. Make the 3D world communicate information
+
+Don't put everything into panels.
+
+Use **3D overlays**.
+
+For example, selected AMR:
+
+```text
+          AMR-02
+        ┌────────┐
+        │  78%   │
+        │ MOVING │
+        └────────┘
+             │
+             ▼
+            🤖
+```
+
+And route:
+
+```text
+🤖 ────────────────► 📦
+       A* ROUTE
+```
+
+For a blocked aisle:
+
+```text
+       🚧
+   AISLE BLOCKED
+```
+
+For charging:
+
+```text
+⚡ CHARGING
+AMR-04
+92%
+```
+
+This creates a proper **digital twin visualization**.
+
+---
+
+# 10. Add minimap
+
+A small top-right minimap can be very effective:
+
+```text
+┌───────────────────┐
+│     MINIMAP       │
+│                   │
+│ ▓▓ ░░ ▓▓ ░░       │
+│ ▓▓ 🤖 ▓▓          │
+│ ────🤖────         │
+│ ▓▓ ░░ ▓▓ 🤖       │
+│                   │
+└───────────────────┘
+```
+
+Show:
+
+* racks
+* aisles
+* AMRs
+* pickup
+* drop-off
+* charging
+* obstacles
+
+Clicking a location could move the camera there.
+
+---
+
+# 11. Add layer toggles
+
+Very useful for demonstrating your algorithms:
+
+```text
+DISPLAY
+
+☑ AMRs
+☑ Routes
+☐ Grid
+☐ Collision Shapes
+☐ Traffic Heatmap
+☐ A* Nodes
+☐ POIs
+☐ Obstacles
+```
+
+This is particularly useful during the jury explanation.
+
+For example:
+
+> "This is our underlying 25×20 navigation grid."
+
+Click:
+
+**Grid ON**
+
+and suddenly the warehouse shows the navigation cells.
+
+Then:
+
+**Routes ON**
+
+and the active paths appear.
+
+---
+
+# 12. Add a navigation-grid visualization
+
+Since you already have:
+
+```text
+25 × 20 = 500 cells
+```
+
+give the jury a way to see it.
+
+```text
+┌─┬─┬─┬─┬─┬─┬─┬─┐
+│ │ │ │ │ │ │ │ │
+├─┼─┼─┼─┼─┼─┼─┼─┤
+│ │ │▓│▓│ │ │ │ │
+├─┼─┼─┼─┼─┼─┼─┼─┤
+│ │ │▓│▓│🤖│ │ │ │
+└─┴─┴─┴─┴─┴─┴─┴─┘
+```
+
+This visually explains the relationship between:
+
+**3D environment → grid → A* → robot**
+
+---
+
+# 13. Improve status colors
+
+Keep your existing robot states, but make them consistent everywhere:
+
+```text
+🟢 MOVING
+🟡 WAITING
+🔴 BLOCKED
+🔵 CHARGING
+🟣 REROUTING
+⚪ IDLE
+```
+
+The same state color should appear in:
+
+* robot LED
+* fleet list
+* AMR detail panel
+* event feed
+* 3D label
+
+This gives the UI strong visual consistency.
+
+---
+
+# 14. Add a command drawer
+
+Instead of permanently showing every control:
+
+```text
+☰ CONTROL CENTER
+```
+
+opens:
+
+```text
+┌──────────────────────────┐
+│ OPERATIONS               │
+├──────────────────────────┤
+│ Assign Task              │
+│ Spawn AMR                │
+│ Block Aisle              │
+│ Add Obstacle             │
+│ Emergency Stop           │
+│ Resume Fleet             │
+├──────────────────────────┤
+│ VISUALIZATION            │
+│ Grid                     │
+│ Routes                   │
+│ Heatmap                  │
+│ Collisions               │
+└──────────────────────────┘
+```
+
+Keeps the main view clean.
+
+---
+
+# 15. Use a professional industrial visual language
+
+I'd go with:
+
+**Dark industrial control-room UI**
+
+```text
+Background:
+dark charcoal/slate
+
+Panels:
+slightly lighter slate
+
+Borders:
+subtle gray
+
+Primary:
+white
+
+Status:
+green / yellow / red / blue / purple
+
+Typography:
+clean technical sans-serif
+```
+
+Avoid:
+
+❌ giant rounded cards everywhere
+❌ excessive gradients
+❌ neon cyberpunk styling
+❌ excessive animations
+❌ huge icons
+❌ UI covering the warehouse
+
+You're building an **industrial fleet-management interface**, not a gaming HUD.
+
+---
+
+# The UI I'd prioritize for your hackathon
+
+Don't try to implement everything.
+
+### Tier 1 — MUST HAVE
+
+```text
+┌────────────────────────────────────────────┐
+│ TOP STATUS BAR                             │
+├───────┬───────────────────────────┬────────┤
+│ FLEET │                           │ EVENTS │
+│ LIST  │       3D WAREHOUSE        │        │
+│       │                           │        │
+│       │                           │        │
+├───────┴───────────────────────────┴────────┤
+│ KPI BAR + CONTROLS                         │
+└────────────────────────────────────────────┘
+```
+
+### Tier 2 — High impact
+
+Add:
+
+* AMR selection/detail panel
+* live event feed
+* route visualization
+* scenario controls
+* AI decision panel
+
+### Tier 3 — Demo polish
+
+Add:
+
+* minimap
+* grid toggle
+* heatmap
+* collision visualization
+* camera transitions
+* animated status changes
+
+---
+
+## The biggest UI change I'd make
+
+Make the **3D warehouse the center of the interface** and make every UI element answer one of these questions:
+
+> **What are the robots doing?**
+
+> **Why are they doing it?**
+
+> **What is the system going to do next?**
+
+If the jury can look at the screen and immediately see:
+
+**AMR-03 is blocked → system detected it → alternative route selected → robot rerouting → task still on schedule**
+
+then your UI is doing its job.
