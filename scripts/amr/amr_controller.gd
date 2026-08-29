@@ -14,6 +14,7 @@ enum RobotState {
 @export var turn_speed: float = 6.0
 @export var loop_waypoints: bool = false
 @export var show_debug_path: bool = true
+@export var path_color: Color = Color(0.1, 0.9, 0.55)
 
 var battery_level: float = 100.0
 var current_state: RobotState = RobotState.MOVING
@@ -40,10 +41,11 @@ func _ready() -> void:
 		grid_manager = main_scene.get_node_or_null("Navigation/GridManager")
 		pathfinder = main_scene.get_node_or_null("Navigation/AStarPathfinder")
 
-	# Setup 3D Path Visualizer dynamically
+	# Setup 3D Path Visualizer in global world space (top_level = true)
 	if visualizer_script:
 		path_visualizer = visualizer_script.new() as Node3D
-		path_visualizer.name = "PathVisualizer"
+		path_visualizer.name = "PathVisualizer_" + robot_id
+		path_visualizer.set("top_level", true) # Independent global world transform!
 		path_visualizer.set("is_enabled", show_debug_path)
 		add_child(path_visualizer)
 
@@ -63,7 +65,7 @@ func set_waypoints(new_waypoints: Array[Vector3]) -> void:
 	if waypoints.size() > 0:
 		target_destination_world = waypoints[waypoints.size() - 1]
 	if path_visualizer and show_debug_path and path_visualizer.has_method("draw_path"):
-		path_visualizer.call("draw_path", waypoints, Color(0.1, 0.9, 0.55))
+		path_visualizer.call("draw_path", waypoints, path_color)
 
 func navigate_to_target(target_world_pos: Vector3) -> bool:
 	target_destination_world = target_world_pos
