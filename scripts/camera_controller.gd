@@ -1,12 +1,12 @@
 class_name WarehouseCameraController
 extends Node3D
 
-@export var pan_speed: float = 22.0
-@export var orbit_sensitivity: float = 0.004
-@export var zoom_sensitivity: float = 2.0
+@export var pan_speed: float = 24.0
+@export var orbit_sensitivity: float = 0.005
+@export var zoom_sensitivity: float = 2.5
 @export var min_zoom: float = 5.0
-@export var max_zoom: float = 60.0
-@export var lerp_speed: float = 10.0
+@export var max_zoom: float = 65.0
+@export var lerp_speed: float = 12.0
 
 var target_position: Vector3 = Vector3(0, 0, 0)
 var target_yaw: float = -0.785398 # -45 degrees
@@ -27,17 +27,20 @@ func _ready() -> void:
 	target_position = global_position
 	set_view_overview()
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_RIGHT:
+		# Support Right Click, Middle Click, and Left Click (with Shift or Control) for dragging
+		if event.button_index == MOUSE_BUTTON_RIGHT or (event.button_index == MOUSE_BUTTON_LEFT and not event.shift_pressed):
 			is_orbiting = event.pressed
 			last_mouse_pos = event.position
-		elif event.button_index == MOUSE_BUTTON_MIDDLE:
+		elif event.button_index == MOUSE_BUTTON_MIDDLE or (event.button_index == MOUSE_BUTTON_LEFT and event.shift_pressed):
 			is_panning = event.pressed
 			last_mouse_pos = event.position
-		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
+		
+		# Mouse Wheel Zoom
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
 			target_distance = clamp(target_distance - zoom_sensitivity, min_zoom, max_zoom)
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
 			target_distance = clamp(target_distance + zoom_sensitivity, min_zoom, max_zoom)
 
 	elif event is InputEventMouseMotion:
@@ -51,10 +54,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		elif is_panning:
 			var right = global_transform.basis.x
 			var forward = Vector3(right.z, 0, -right.x).normalized()
-			# Dragging mouse pans target position smoothly
 			target_position += (-right * delta.x + forward * delta.y) * (target_distance * 0.002)
 
 	elif event is InputEventKey and event.pressed:
+		# Quick View Switcher Hotkeys
 		if event.keycode == KEY_1:
 			set_view_overview()
 		elif event.keycode == KEY_2:
@@ -65,15 +68,19 @@ func _unhandled_input(event: InputEvent) -> void:
 			set_view_charging()
 
 func _process(delta: float) -> void:
-	# WASD Panning Controls (Intuitive Direction Mapping)
+	# WASD & Arrow Key Panning (Checked continuously in _process)
 	var move_vec = Vector3.ZERO
 	var right = basis.x
 	var forward = Vector3(right.z, 0, -right.x).normalized()
 	
-	if Input.is_key_pressed(KEY_W): move_vec += forward  # Move Forward into scene
-	if Input.is_key_pressed(KEY_S): move_vec -= forward  # Move Backward out of scene
-	if Input.is_key_pressed(KEY_A): move_vec -= right    # Move Left
-	if Input.is_key_pressed(KEY_D): move_vec += right    # Move Right
+	if Input.is_physical_key_pressed(KEY_W) or Input.is_physical_key_pressed(KEY_UP):
+		move_vec += forward
+	if Input.is_physical_key_pressed(KEY_S) or Input.is_physical_key_pressed(KEY_DOWN):
+		move_vec -= forward
+	if Input.is_physical_key_pressed(KEY_A) or Input.is_physical_key_pressed(KEY_LEFT):
+		move_vec -= right
+	if Input.is_physical_key_pressed(KEY_D) or Input.is_physical_key_pressed(KEY_RIGHT):
+		move_vec += right
 
 	if move_vec.length_squared() > 0.001:
 		target_position += move_vec.normalized() * pan_speed * delta
