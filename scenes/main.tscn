@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=10 format=3]
 
 [ext_resource type="Environment" path="res://materials/environment.tres" id="1_env"]
 [ext_resource type="Script" path="res://scripts/warehouse_builder.gd" id="2_builder"]
@@ -8,20 +8,52 @@
 [ext_resource type="Script" path="res://scripts/amr/fleet_manager.gd" id="6_fleet"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
-bg_color = Color(0.06, 0.09, 0.14, 0.92)
+bg_color = Color(0.07, 0.1, 0.16, 0.94)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.18, 0.26, 0.38, 0.9)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-expand_margin_left = 10.0
-expand_margin_top = 8.0
-expand_margin_right = 10.0
-expand_margin_bottom = 8.0
+border_color = Color(0.18, 0.28, 0.42, 0.95)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 8.0
+expand_margin_top = 6.0
+expand_margin_right = 8.0
+expand_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+bg_color = Color(0.12, 0.18, 0.28, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.24, 0.35, 0.5, 0.8)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 6.0
+expand_margin_top = 3.0
+expand_margin_right = 6.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_hover"]
+bg_color = Color(0.18, 0.28, 0.42, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.38, 0.55, 0.78, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_left = 6.0
+expand_margin_top = 3.0
+expand_margin_right = 6.0
+expand_margin_bottom = 3.0
 
 [node name="Main" type="Node3D"]
 
@@ -111,24 +143,32 @@ vertical_alignment = 1
 layout_mode = 2
 mouse_filter = 0
 focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
 text = "[1] Overview"
 
 [node name="BtnTopDown" type="Button" parent="UI/HUD/HeaderPanel/HBox"]
 layout_mode = 2
 mouse_filter = 0
 focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
 text = "[2] Top-Down"
 
 [node name="BtnPickup" type="Button" parent="UI/HUD/HeaderPanel/HBox"]
 layout_mode = 2
 mouse_filter = 0
 focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
 text = "[3] Stations"
 
 [node name="BtnCharging" type="Button" parent="UI/HUD/HeaderPanel/HBox"]
 layout_mode = 2
 mouse_filter = 0
 focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
 text = "[4] Charging Docks"
 
 [node name="FleetPanel" type="PanelContainer" parent="UI/HUD"]
@@ -187,6 +227,8 @@ size_flags_horizontal = 3
 mouse_filter = 0
 focus_mode = 0
 theme_override_font_sizes/font_size = 11
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
 text = "TRACK"
 
 [node name="BtnToggleBlock" type="Button" parent="UI/HUD/SelectedAMRPanel/VBox/HBox"]
@@ -195,6 +237,8 @@ size_flags_horizontal = 3
 mouse_filter = 0
 focus_mode = 0
 theme_override_font_sizes/font_size = 11
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
 text = "TOGGLE BLOCK"
 
 [node name="BtnCloseDetail" type="Button" parent="UI/HUD/SelectedAMRPanel/VBox/HBox"]
@@ -202,6 +246,8 @@ layout_mode = 2
 mouse_filter = 0
 focus_mode = 0
 theme_override_font_sizes/font_size = 11
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
 text = "✖"
 
 [node name="DecisionPanel" type="PanelContainer" parent="UI/HUD"]
@@ -306,6 +352,8 @@ layout_mode = 2
 mouse_filter = 0
 focus_mode = 0
 theme_override_font_sizes/font_size = 11
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
 text = "▶ Normal Patrol"
 
 [node name="BtnConflictScenario" type="Button" parent="UI/HUD/ControlBarPanel/HBox"]
@@ -313,6 +361,8 @@ layout_mode = 2
 mouse_filter = 0
 focus_mode = 0
 theme_override_font_sizes/font_size = 11
+theme_override_styles/hover = SubResource("StyleBoxFlat_btn_hover")
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
 text = "▶ Sim Bottleneck"
 
 [node name="VSeparator" type="VSeparator" parent="UI/HUD/ControlBarPanel/HBox"]
