@@ -1,0 +1,8 @@
+# Godot 4 cache & binary executables
+.godot/
+.godot_bin/
+
+# Temporary files & logs
+*.tmp
+*.log
+scratch/

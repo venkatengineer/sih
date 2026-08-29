@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bwallconcrete01"]
+
+[resource]
+resource_name = "WallConcrete"
+albedo_color = Color(0.22, 0.25, 0.28, 1)
+metallic = 0.2
+roughness = 0.6

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://btrussmetal01"]
+
+[resource]
+resource_name = "TrussMetal"
+albedo_color = Color(0.12, 0.14, 0.16, 1)
+metallic = 0.8
+roughness = 0.4

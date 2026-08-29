@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bmetalrackorange01"]
+
+[resource]
+resource_name = "MetalRackOrange"
+albedo_color = Color(0.92, 0.42, 0.08, 1)
+metallic = 0.7
+roughness = 0.3

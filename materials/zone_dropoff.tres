@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bzonedropoff01"]
+
+[resource]
+resource_name = "ZoneDropoff"
+transparency = 1
+albedo_color = Color(0.7, 0.25, 0.95, 0.45)
+emission_enabled = true
+emission = Color(0.7, 0.25, 0.95, 1)
+emission_energy_multiplier = 1.2
+roughness = 0.2

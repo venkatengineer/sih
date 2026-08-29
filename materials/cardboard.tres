@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcardboard01"]
+
+[resource]
+resource_name = "Cardboard"
+albedo_color = Color(0.72, 0.54, 0.36, 1)
+metallic = 0.0
+roughness = 0.85

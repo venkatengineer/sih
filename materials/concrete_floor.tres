@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bconcretefloor01"]
+
+[resource]
+resource_name = "ConcreteFloor"
+albedo_color = Color(0.2, 0.22, 0.25, 1)
+metallic = 0.15
+roughness = 0.35
+specular_mode = 0
