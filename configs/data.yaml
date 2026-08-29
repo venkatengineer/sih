@@ -1,0 +1,14 @@
+# Path must be absolute or relative to the directory from where you run the training script
+path: ../data/merged_dataset  # dataset root dir
+train: images/train  # train images (relative to 'path')
+val: images/val      # val images (relative to 'path')
+
+# Classes dictionary
+# UPDATE these classes based on the actual classes in your Roboflow/Custom dataset
+names:
+  0: person
+  1: forklift
+  2: pallet
+  3: shelf
+  4: pillar
+  5: robot

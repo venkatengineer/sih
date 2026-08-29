@@ -1,0 +1,15 @@
+# Configuration for the Robot's Safety Envelope
+
+# The width of the robot path in degrees. 
+# For example, if your camera has a 60-degree FOV, an object within +/- 15 degrees might be in your path.
+path_width_degrees: 15.0
+
+# Distance thresholds (NOTE: these are relative MiDaS units, not meters!)
+# You will need to tune these numbers once you test the physical camera.
+# The number gets SMALLER as the object gets CLOSER.
+
+# Any object closer than this is DANGER (stop)
+danger_distance_threshold: 4.0
+
+# Any object closer than this (but further than danger) is CAUTION (slow down)
+caution_distance_threshold: 7.0
