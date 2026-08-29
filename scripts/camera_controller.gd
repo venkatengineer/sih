@@ -27,13 +27,13 @@ func _ready() -> void:
 	target_position = global_position
 	set_view_overview()
 
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		# Support Right Click, Middle Click, and Left Click (with Shift or Control) for dragging
-		if event.button_index == MOUSE_BUTTON_RIGHT or (event.button_index == MOUSE_BUTTON_LEFT and not event.shift_pressed):
+		# Mouse Drag for Orbit (Right Click or Left Click on viewport)
+		if event.button_index == MOUSE_BUTTON_RIGHT or event.button_index == MOUSE_BUTTON_LEFT:
 			is_orbiting = event.pressed
 			last_mouse_pos = event.position
-		elif event.button_index == MOUSE_BUTTON_MIDDLE or (event.button_index == MOUSE_BUTTON_LEFT and event.shift_pressed):
+		elif event.button_index == MOUSE_BUTTON_MIDDLE:
 			is_panning = event.pressed
 			last_mouse_pos = event.position
 		

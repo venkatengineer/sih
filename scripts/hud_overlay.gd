@@ -4,6 +4,9 @@ extends Control
 var camera_controller: Node3D = null
 
 func _ready() -> void:
+	# Enable MOUSE_FILTER_PASS on root HUD control so mouse clicks pass to buttons & viewport
+	mouse_filter = Control.MOUSE_FILTER_PASS
+	
 	var main_scene = get_tree().current_scene
 	if main_scene:
 		camera_controller = main_scene.get_node_or_null("CameraPivot")
