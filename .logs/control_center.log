@@ -1,0 +1,1828 @@
+07:46:39 [INFO] control_center.bridge: Starting Robot Fleet Bridge...
+07:46:39 [INFO] control_center.bridge: [SAFETY] Warehouse dimensions: 25x20
+07:46:39 [INFO] control_center.bridge: [SAFETY] Static obstacles loaded: 214 (Sample: [(0, 0), (0, 1), (0, 2), (0, 3), (0, 4)]...)
+07:46:39 [INFO] control_center.bridge: [SAFETY] AMR-01 spawn: (2.0, 10.0) | P2P UDP: 5001 | Gateway WS: 8001
+07:46:39 [INFO] edge_robot: [AMR-01] [SAFETY] Warehouse dimensions: 25x20
+07:46:39 [INFO] edge_robot: [AMR-01] [SAFETY] Static obstacles loaded: 214
+07:46:39 [INFO] edge_robot: [AMR-01] [SAFETY] AMR-01 spawn: (2.0, 10.0) | P2P UDP: 5001 | Gateway WS: 8001
+07:46:39 [INFO] edge_robot.network: [AMR-01] P2P Network Node listening on UDP 127.0.0.1:5001
+07:46:39 [INFO] edge_robot: [AMR-01] CONTROL_LOOP STARTED at 20.0 Hz
+07:46:39 [INFO] edge_robot.gateway: WebSocket Server listening on ws://127.0.0.1:8001
+07:46:39 [INFO] edge_robot.gateway: [AMR-01] FRONTEND_CONNECTED ws://127.0.0.1:8001
+07:46:39 [INFO] control_center.bridge: Spawned Embedded Edge Node: AMR-01 (P2P UDP=5001 | WebSocket Godot Gateway=8001)
+07:46:39 [INFO] control_center.bridge: [SAFETY] AMR-02 spawn: (8.0, 3.0) | P2P UDP: 5002 | Gateway WS: 8002
+07:46:39 [INFO] edge_robot: [AMR-02] [SAFETY] Warehouse dimensions: 25x20
+07:46:39 [INFO] edge_robot: [AMR-02] [SAFETY] Static obstacles loaded: 214
+07:46:39 [INFO] edge_robot: [AMR-02] [SAFETY] AMR-02 spawn: (8.0, 3.0) | P2P UDP: 5002 | Gateway WS: 8002
+07:46:39 [INFO] edge_robot.network: [AMR-02] P2P Network Node listening on UDP 127.0.0.1:5002
+07:46:39 [INFO] edge_robot: [AMR-02] CONTROL_LOOP STARTED at 20.0 Hz
+07:46:39 [INFO] edge_robot.gateway: WebSocket Server listening on ws://127.0.0.1:8002
+07:46:39 [INFO] edge_robot.gateway: [AMR-02] FRONTEND_CONNECTED ws://127.0.0.1:8002
+07:46:39 [INFO] control_center.bridge: Spawned Embedded Edge Node: AMR-02 (P2P UDP=5002 | WebSocket Godot Gateway=8002)
+07:46:39 [INFO] control_center.bridge: [SAFETY] AMR-03 spawn: (8.0, 2.0) | P2P UDP: 5003 | Gateway WS: 8003
+07:46:39 [INFO] edge_robot: [AMR-03] [SAFETY] Warehouse dimensions: 25x20
+07:46:39 [INFO] edge_robot: [AMR-03] [SAFETY] Static obstacles loaded: 214
+07:46:39 [INFO] edge_robot: [AMR-03] [SAFETY] AMR-03 spawn: (8.0, 2.0) | P2P UDP: 5003 | Gateway WS: 8003
+07:46:39 [INFO] edge_robot.network: [AMR-03] P2P Network Node listening on UDP 127.0.0.1:5003
+07:46:39 [INFO] edge_robot: [AMR-03] CONTROL_LOOP STARTED at 20.0 Hz
+07:46:39 [INFO] edge_robot.gateway: WebSocket Server listening on ws://127.0.0.1:8003
+07:46:39 [INFO] edge_robot.gateway: [AMR-03] FRONTEND_CONNECTED ws://127.0.0.1:8003
+07:46:39 [INFO] control_center.bridge: Spawned Embedded Edge Node: AMR-03 (P2P UDP=5003 | WebSocket Godot Gateway=8003)
+07:46:39 [INFO] control_center.bridge: [SAFETY] AMR-04 spawn: (20.0, 16.0) | P2P UDP: 5004 | Gateway WS: 8004
+07:46:39 [INFO] edge_robot: [AMR-04] [SAFETY] Warehouse dimensions: 25x20
+07:46:39 [INFO] edge_robot: [AMR-04] [SAFETY] Static obstacles loaded: 214
+07:46:39 [INFO] edge_robot: [AMR-04] [SAFETY] AMR-04 spawn: (20.0, 16.0) | P2P UDP: 5004 | Gateway WS: 8004
+07:46:39 [INFO] edge_robot.network: [AMR-04] P2P Network Node listening on UDP 127.0.0.1:5004
+07:46:39 [INFO] edge_robot: [AMR-04] CONTROL_LOOP STARTED at 20.0 Hz
+07:46:39 [INFO] edge_robot.gateway: WebSocket Server listening on ws://127.0.0.1:8004
+07:46:39 [INFO] edge_robot.gateway: [AMR-04] FRONTEND_CONNECTED ws://127.0.0.1:8004
+07:46:39 [INFO] control_center.bridge: Spawned Embedded Edge Node: AMR-04 (P2P UDP=5004 | WebSocket Godot Gateway=8004)
+07:46:39 [INFO] control_center.server: 🚀 AMR Web Control Center running at: http://localhost:8000
+07:46:39 [INFO] edge_robot: [AMR-01] P2P: AMR-01 ↔ AMR-02 connected
+07:46:39 [INFO] edge_robot: [AMR-01] P2P: AMR-01 ↔ AMR-03 connected
+07:46:39 [INFO] edge_robot: [AMR-01] P2P: AMR-01 ↔ AMR-04 connected
+07:46:39 [INFO] edge_robot: [AMR-02] P2P: AMR-02 ↔ AMR-03 connected
+07:46:39 [INFO] edge_robot: [AMR-02] P2P: AMR-02 ↔ AMR-04 connected
+07:46:39 [INFO] edge_robot: [AMR-02] P2P: AMR-02 ↔ AMR-01 connected
+07:46:39 [INFO] edge_robot: [AMR-03] P2P: AMR-03 ↔ AMR-04 connected
+07:46:39 [INFO] edge_robot: [AMR-03] P2P: AMR-03 ↔ AMR-01 connected
+07:46:39 [INFO] edge_robot: [AMR-04] P2P: AMR-04 ↔ AMR-01 connected
+07:46:39 [INFO] edge_robot: [AMR-03] P2P: AMR-03 ↔ AMR-02 connected
+07:46:39 [INFO] edge_robot: [AMR-04] P2P: AMR-04 ↔ AMR-02 connected
+07:46:39 [INFO] edge_robot: [AMR-04] P2P: AMR-04 ↔ AMR-03 connected
+07:46:39 [INFO] edge_robot.gateway: Frontend simulation connected from 127.0.0.1:47996
+07:46:39 [INFO] edge_robot.gateway: Frontend simulation connected from 127.0.0.1:55834
+07:46:39 [INFO] edge_robot.gateway: Frontend simulation connected from 127.0.0.1:49898
+07:46:40 [INFO] control_center.websocket: Operator Console connected (total: 1)
+07:46:41 [INFO] edge_robot.gateway: Frontend simulation connected from 127.0.0.1:59218
+07:46:44 [INFO] control_center.websocket: Operator Console connected (total: 2)
+07:46:46 [INFO] control_center.bridge: Broadcast task T-1001 into P2P mesh via AMR-01
+07:46:46 [INFO] edge_robot: [AMR-01] AUCTION_FINALIZED task=T-1001 winner=AMR-01 round=1
+07:46:46 [INFO] edge_robot: [AMR-02] AUCTION_FINALIZED task=T-1001 winner=AMR-01 round=1
+07:46:46 [INFO] edge_robot: [AMR-03] AUCTION_FINALIZED task=T-1001 winner=AMR-01 round=1
+07:46:46 [INFO] edge_robot: [AMR-04] AUCTION_FINALIZED task=T-1001 winner=AMR-01 round=1
+07:46:46 [INFO] edge_robot: [AMR-01] STATE_TRANSITION IDLE -> PLANNING (intent=MOVE)
+07:46:46 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=R-AMR-01-1788056206902)
+07:46:46 [INFO] edge_robot: [A*] robot=AMR-01 start=(3.34, 10.0) goal=(5.0, 5.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (3.34, 10.0)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    8
+  Path length: 14.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:46:46 [INFO] edge_robot: [AMR-01] STATE_TRANSITION PLANNING -> MOVING (intent=MOVE)
+07:46:46 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=8 path=[(3, 10), (3, 9), (3, 8), (3, 7), (3, 6)]...
+07:46:46 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=8
+07:46:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.34, 10.00) dist=1.06m desired_hdg=251.2° actual_hdg=270.0° align=0.95 progress=YES
+07:46:46 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:46 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:46:47 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:47 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.70m <= 0.85m
+07:46:47 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:47 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.30, 9.89) dist=0.94m desired_hdg=251.2° actual_hdg=251.2° align=1.00 progress=YES
+07:46:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:47 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.76m <= 0.85m
+07:46:47 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:47 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.27, 9.79) dist=0.83m desired_hdg=251.2° actual_hdg=251.2° align=1.00 progress=YES
+07:46:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:47 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.83m <= 0.85m
+07:46:47 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:47 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.23, 9.68) dist=0.72m desired_hdg=251.2° actual_hdg=251.2° align=1.00 progress=YES
+07:46:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:47 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.20, 9.58) dist=0.61m desired_hdg=251.2° actual_hdg=251.2° align=1.00 progress=YES
+07:46:47 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.16, 9.47) dist=0.50m desired_hdg=251.2° actual_hdg=251.2° align=1.00 progress=YES
+07:46:47 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.12, 9.37) dist=0.39m desired_hdg=251.2° actual_hdg=251.2° align=1.00 progress=YES
+07:46:47 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.09, 9.26) dist=0.27m desired_hdg=251.2° actual_hdg=251.2° align=1.00 progress=YES
+07:46:47 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.01, 9.82) dist=0.82m desired_hdg=269.2° actual_hdg=93.5° align=-1.00 progress=YES
+07:46:47 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.01, 9.71) dist=0.71m desired_hdg=269.3° actual_hdg=269.2° align=1.00 progress=YES
+07:46:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:47 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:46:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:48 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.71m <= 0.85m
+07:46:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:48 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.76m <= 0.85m
+07:46:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:48 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.83m <= 0.85m
+07:46:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.19, 9.57) dist=0.60m desired_hdg=251.1° actual_hdg=251.1° align=1.00 progress=YES
+07:46:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.16, 9.46) dist=0.49m desired_hdg=251.0° actual_hdg=251.1° align=1.00 progress=YES
+07:46:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.12, 9.36) dist=0.38m desired_hdg=251.0° actual_hdg=251.1° align=1.00 progress=YES
+07:46:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 9) pos=(3.09, 9.25) dist=0.27m desired_hdg=251.2° actual_hdg=251.1° align=1.00 progress=YES
+07:46:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.05, 9.15) dist=1.15m desired_hdg=267.5° actual_hdg=251.1° align=0.96 progress=YES
+07:46:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.04, 9.03) dist=1.03m desired_hdg=267.5° actual_hdg=267.5° align=1.00 progress=YES
+07:46:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.04, 8.92) dist=0.92m desired_hdg=267.5° actual_hdg=267.5° align=1.00 progress=YES
+07:46:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.04, 8.81) dist=0.81m desired_hdg=267.5° actual_hdg=267.5° align=1.00 progress=YES
+07:46:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.03, 8.70) dist=0.70m desired_hdg=267.5° actual_hdg=267.5° align=1.00 progress=YES
+07:46:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.03, 8.59) dist=0.59m desired_hdg=267.5° actual_hdg=267.5° align=1.00 progress=YES
+07:46:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.02, 8.48) dist=0.48m desired_hdg=267.5° actual_hdg=267.5° align=1.00 progress=YES
+07:46:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:48 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:46:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:49 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.69m <= 0.85m
+07:46:49 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:49 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.74m <= 0.85m
+07:46:49 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:49 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.79m <= 0.85m
+07:46:49 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:49 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.06, 8.34) dist=0.34m desired_hdg=260.3° actual_hdg=260.3° align=1.00 progress=YES
+07:46:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:49 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.74m <= 0.85m
+07:46:49 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:50 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:50 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.76m <= 0.85m
+07:46:50 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:50 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:50 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:46:50 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.80m <= 0.85m
+07:46:50 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:46:50 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:46:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.03, 8.23) dist=0.23m desired_hdg=262.6° actual_hdg=262.6° align=1.00 progress=YES
+07:46:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.07, 10.00) dist=3.00m desired_hdg=268.7° actual_hdg=95.8° align=-0.99 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.07, 9.89) dist=2.89m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.06, 9.78) dist=2.78m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.06, 9.66) dist=2.67m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.06, 9.55) dist=2.55m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.06, 9.44) dist=2.44m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.05, 9.33) dist=2.33m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.05, 9.22) dist=2.22m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.05, 9.11) dist=2.11m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.05, 9.00) dist=2.00m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.04, 8.88) dist=1.89m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.04, 8.77) dist=1.77m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.04, 8.66) dist=1.66m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.04, 8.55) dist=1.55m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.03, 8.44) dist=1.44m desired_hdg=268.6° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.03, 8.33) dist=1.33m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.03, 8.22) dist=1.22m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.03, 8.10) dist=1.10m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.02, 7.99) dist=0.99m desired_hdg=268.7° actual_hdg=268.7° align=1.00 progress=YES
+07:46:52 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.02, 7.88) dist=0.88m desired_hdg=268.6° actual_hdg=268.7° align=1.00 progress=YES
+07:46:53 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.02, 7.80) dist=0.80m desired_hdg=268.6° actual_hdg=268.6° align=1.00 progress=YES
+07:46:54 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.01, 7.72) dist=0.72m desired_hdg=269.0° actual_hdg=268.9° align=1.00 progress=YES
+07:46:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.01, 7.65) dist=0.65m desired_hdg=269.1° actual_hdg=269.1° align=1.00 progress=YES
+07:46:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.01, 7.54) dist=0.54m desired_hdg=269.1° actual_hdg=269.1° align=1.00 progress=YES
+07:46:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.01, 7.43) dist=0.43m desired_hdg=269.1° actual_hdg=269.1° align=1.00 progress=YES
+07:46:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.00, 7.36) dist=0.36m desired_hdg=269.2° actual_hdg=269.3° align=1.00 progress=YES
+07:46:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.00, 7.25) dist=0.25m desired_hdg=269.3° actual_hdg=269.3° align=1.00 progress=YES
+07:46:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 9.17) dist=3.17m desired_hdg=269.8° actual_hdg=4.6° align=-0.08 progress=YES
+07:46:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 9.06) dist=3.06m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 8.95) dist=2.95m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 8.84) dist=2.84m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 8.72) dist=2.72m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 8.61) dist=2.61m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 8.50) dist=2.50m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 8.39) dist=2.39m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 8.28) dist=2.28m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 8.16) dist=2.17m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 8.05) dist=2.05m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 7.94) dist=1.94m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.01, 7.83) dist=1.83m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 7.72) dist=1.72m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 7.61) dist=1.61m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 7.50) dist=1.50m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 7.38) dist=1.38m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 7.27) dist=1.27m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 7.16) dist=1.16m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 7.05) dist=1.05m desired_hdg=269.8° actual_hdg=269.8° align=1.00 progress=YES
+07:46:58 [WARNING] edge_robot: [AMR-01] PEER_TIMEOUT peer=AMR-02 marked offline
+07:46:58 [WARNING] edge_robot: [AMR-01] PEER_TIMEOUT peer=AMR-04 marked offline
+07:46:58 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 6.99) dist=0.99m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:46:59 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 6.90) dist=0.90m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:46:59 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 6.79) dist=0.79m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:46:59 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 6.68) dist=0.68m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:00 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 6.65) dist=0.65m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:00 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 6.54) dist=0.54m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:00 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 6.42) dist=0.42m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:00 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 6.31) dist=0.31m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:01 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.00, 6.23) dist=0.23m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:01 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 8.05) dist=3.05m desired_hdg=270.0° actual_hdg=0.3° align=-0.01 progress=YES
+07:47:01 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 7.94) dist=2.94m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 7.83) dist=2.83m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 7.71) dist=2.71m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 7.60) dist=2.60m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 7.49) dist=2.49m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 7.38) dist=2.38m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 7.27) dist=2.27m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 7.16) dist=2.16m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 7.04) dist=2.04m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 6.93) dist=1.93m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 6.82) dist=1.82m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 6.71) dist=1.71m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 6.60) dist=1.60m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 6.49) dist=1.49m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 6.38) dist=1.38m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 6.26) dist=1.26m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 6.15) dist=1.15m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 6.04) dist=1.04m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:02 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 5.93) dist=0.93m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:03 [WARNING] edge_robot: [AMR-01] PEER_TIMEOUT peer=AMR-03 marked offline
+07:47:03 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 5.86) dist=0.86m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:03 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 5.74) dist=0.74m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:04 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 5.67) dist=0.67m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:04 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 5.56) dist=0.56m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:05 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 5.48) dist=0.48m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:06 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 5.42) dist=0.42m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:06 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 5.31) dist=0.31m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:06 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.00, 5.20) dist=0.20m desired_hdg=270.0° actual_hdg=270.0° align=1.00 progress=YES
+07:47:06 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.00, 6.93) dist=2.17m desired_hdg=297.4° actual_hdg=0.0° align=0.46 progress=YES
+07:47:06 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.05, 6.83) dist=2.06m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.10, 6.73) dist=1.95m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.15, 6.63) dist=1.84m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.20, 6.54) dist=1.73m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.26, 6.44) dist=1.62m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:07 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.77m <= 0.85m
+07:47:07 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:07 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.31, 6.34) dist=1.51m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:07 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.68m <= 0.85m
+07:47:07 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:07 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.36, 6.24) dist=1.39m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:07 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.61m <= 0.85m
+07:47:07 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:07 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.41, 6.14) dist=1.28m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:07 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.54m <= 0.85m
+07:47:07 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:07 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.46, 6.04) dist=1.17m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:07 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.49m <= 0.85m
+07:47:07 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:07 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.51, 5.94) dist=1.06m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:07 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.46m <= 0.85m
+07:47:07 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:07 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.56, 5.84) dist=0.95m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:07 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.46m <= 0.85m
+07:47:07 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:07 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.62, 5.74) dist=0.84m desired_hdg=297.4° actual_hdg=297.4° align=1.00 progress=YES
+07:47:07 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:08 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.77m <= 0.85m
+07:47:08 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:08 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.69m <= 0.85m
+07:47:08 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:08 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.62m <= 0.85m
+07:47:08 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:08 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.56m <= 0.85m
+07:47:08 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:08 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.52m <= 0.85m
+07:47:08 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:08 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.50m <= 0.85m
+07:47:08 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:08 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.50m <= 0.85m
+07:47:08 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:08 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.61, 5.68) dist=0.79m desired_hdg=299.8° actual_hdg=299.7° align=1.00 progress=YES
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:08 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.53m <= 0.85m
+07:47:08 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:08 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:09 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.82m <= 0.85m
+07:47:09 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:09 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.74m <= 0.85m
+07:47:09 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:09 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:47:09 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:09 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.60m <= 0.85m
+07:47:09 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:09 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.55m <= 0.85m
+07:47:09 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:09 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.52m <= 0.85m
+07:47:09 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:09 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.51m <= 0.85m
+07:47:09 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:09 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.53m <= 0.85m
+07:47:09 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:09 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.00, 6.67) dist=1.95m desired_hdg=300.9° actual_hdg=0.0° align=0.51 progress=NO
+07:47:09 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:10 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.82m <= 0.85m
+07:47:10 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:10 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.74m <= 0.85m
+07:47:10 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:10 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:47:10 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:10 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.60m <= 0.85m
+07:47:10 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:10 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.55m <= 0.85m
+07:47:10 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:10 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.52m <= 0.85m
+07:47:10 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:10 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.51m <= 0.85m
+07:47:10 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:10 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.53m <= 0.85m
+07:47:10 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:10 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.63, 5.62) dist=0.72m desired_hdg=300.9° actual_hdg=300.9° align=1.00 progress=YES
+07:47:10 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:11 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.79m <= 0.85m
+07:47:11 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:11 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.71m <= 0.85m
+07:47:11 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:11 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.64m <= 0.85m
+07:47:11 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:11 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.59m <= 0.85m
+07:47:11 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:11 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.55m <= 0.85m
+07:47:11 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:11 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.53m <= 0.85m
+07:47:11 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:11 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.54m <= 0.85m
+07:47:11 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:11 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.57m <= 0.85m
+07:47:11 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:11 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.65, 5.55) dist=0.65m desired_hdg=302.2° actual_hdg=302.2° align=1.00 progress=YES
+07:47:11 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:12 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.82m <= 0.85m
+07:47:12 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:12 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.75m <= 0.85m
+07:47:12 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:12 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.68m <= 0.85m
+07:47:12 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:12 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.63m <= 0.85m
+07:47:12 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:12 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.59m <= 0.85m
+07:47:12 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:12 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.57m <= 0.85m
+07:47:12 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:12 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.58m <= 0.85m
+07:47:12 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:12 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.61m <= 0.85m
+07:47:12 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:12 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:12 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.00, 6.24) dist=1.59m desired_hdg=308.9° actual_hdg=0.0° align=0.63 progress=NO
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:13 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.79m <= 0.85m
+07:47:13 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:13 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.73m <= 0.85m
+07:47:13 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:13 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.68m <= 0.85m
+07:47:13 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:13 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.64m <= 0.85m
+07:47:13 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:13 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.63m <= 0.85m
+07:47:13 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:13 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.63m <= 0.85m
+07:47:13 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:13 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:47:13 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:13 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.63, 5.46) dist=0.59m desired_hdg=308.9° actual_hdg=308.9° align=1.00 progress=YES
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:13 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.70m <= 0.85m
+07:47:13 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:13 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.70, 5.37) dist=0.48m desired_hdg=308.9° actual_hdg=308.9° align=1.00 progress=YES
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:13 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.75m <= 0.85m
+07:47:13 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:13 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:14 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.79m <= 0.85m
+07:47:14 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:14 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.74m <= 0.85m
+07:47:14 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:14 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.71m <= 0.85m
+07:47:14 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:14 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.69m <= 0.85m
+07:47:14 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:14 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.69m <= 0.85m
+07:47:14 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:14 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.71m <= 0.85m
+07:47:14 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:14 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.74m <= 0.85m
+07:47:14 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:14 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.69, 5.32) dist=0.45m desired_hdg=313.6° actual_hdg=313.6° align=1.00 progress=YES
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:14 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.79m <= 0.85m
+07:47:14 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:14 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.77, 5.24) dist=0.33m desired_hdg=313.7° actual_hdg=313.6° align=1.00 progress=YES
+07:47:14 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:14 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.85, 5.16) dist=0.22m desired_hdg=313.5° actual_hdg=313.6° align=1.00 progress=YES
+07:47:14 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.00, 5.89) dist=2.19m desired_hdg=336.0° actual_hdg=0.0° align=0.91 progress=YES
+07:47:14 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.10, 5.84) dist=2.08m desired_hdg=336.0° actual_hdg=336.0° align=1.00 progress=YES
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:15 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.82m <= 0.85m
+07:47:15 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:15 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.20, 5.80) dist=1.97m desired_hdg=336.0° actual_hdg=336.0° align=1.00 progress=YES
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:15 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.74m <= 0.85m
+07:47:15 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:15 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.31, 5.75) dist=1.85m desired_hdg=336.0° actual_hdg=336.0° align=1.00 progress=YES
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:15 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:47:15 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:15 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.41, 5.71) dist=1.74m desired_hdg=336.0° actual_hdg=336.0° align=1.00 progress=YES
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:15 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.59m <= 0.85m
+07:47:15 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:15 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.51, 5.66) dist=1.63m desired_hdg=336.0° actual_hdg=336.0° align=1.00 progress=YES
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:15 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.55m <= 0.85m
+07:47:15 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:15 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.61, 5.62) dist=1.52m desired_hdg=336.0° actual_hdg=336.0° align=1.00 progress=YES
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:15 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.51m <= 0.85m
+07:47:15 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:15 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.71, 5.57) dist=1.41m desired_hdg=336.0° actual_hdg=336.0° align=1.00 progress=YES
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:15 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.51m <= 0.85m
+07:47:15 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:15 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.82, 5.53) dist=1.30m desired_hdg=336.0° actual_hdg=336.0° align=1.00 progress=YES
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:15 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.53m <= 0.85m
+07:47:15 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:15 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.92, 5.48) dist=1.18m desired_hdg=336.0° actual_hdg=336.0° align=1.00 progress=YES
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:15 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.56m <= 0.85m
+07:47:15 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:15 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.02, 5.44) dist=1.07m desired_hdg=336.0° actual_hdg=336.0° align=1.00 progress=YES
+07:47:15 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:16 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.78m <= 0.85m
+07:47:16 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:16 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.72m <= 0.85m
+07:47:16 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:16 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:47:16 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:16 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.62m <= 0.85m
+07:47:16 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:16 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.60m <= 0.85m
+07:47:16 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:16 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.60m <= 0.85m
+07:47:16 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:16 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.62m <= 0.85m
+07:47:16 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:16 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.65m <= 0.85m
+07:47:16 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:16 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.05, 5.35) dist=1.01m desired_hdg=340.0° actual_hdg=339.9° align=1.00 progress=YES
+07:47:16 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:17 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.81m <= 0.85m
+07:47:17 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:17 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.76m <= 0.85m
+07:47:17 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:17 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.72m <= 0.85m
+07:47:17 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:17 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.70m <= 0.85m
+07:47:17 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:17 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.70m <= 0.85m
+07:47:17 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:17 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.72m <= 0.85m
+07:47:17 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:17 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.75m <= 0.85m
+07:47:17 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:17 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.07, 5.25) dist=0.96m desired_hdg=344.6° actual_hdg=344.6° align=1.00 progress=YES
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:17 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.80m <= 0.85m
+07:47:17 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:17 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.18, 5.22) dist=0.85m desired_hdg=344.7° actual_hdg=344.6° align=1.00 progress=YES
+07:47:17 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:18 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:18 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.83m <= 0.85m
+07:47:18 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:18 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:18 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:18 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.81m <= 0.85m
+07:47:18 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:18 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:18 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:18 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.81m <= 0.85m
+07:47:18 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:18 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:18 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:18 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.82m <= 0.85m
+07:47:18 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:18 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:18 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:18 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.84m <= 0.85m
+07:47:18 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:18 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:18 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.21, 5.14) dist=0.81m desired_hdg=349.8° actual_hdg=349.8° align=1.00 progress=YES
+07:47:18 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.32, 5.12) dist=0.69m desired_hdg=349.8° actual_hdg=349.8° align=1.00 progress=YES
+07:47:18 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.43, 5.10) dist=0.58m desired_hdg=349.8° actual_hdg=349.8° align=1.00 progress=YES
+07:47:19 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.559, 5.038) route=R-AMR-01-1788056206902 travel_time=32.71s reroutes=0 obstacles=0
+07:47:19 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> PLANNING (intent=MOVE)
+07:47:19 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:19 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.559, 5.038) route=T-T-1001-DROPOFF travel_time=32.76s reroutes=0 obstacles=0
+07:47:19 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:19 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.559, 5.038) route=T-T-1001-DROPOFF travel_time=32.81s reroutes=0 obstacles=0
+07:47:19 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:19 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.559, 5.038) route=T-T-1001-DROPOFF travel_time=32.86s reroutes=0 obstacles=0
+07:47:19 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:19 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.559, 5.038) route=T-T-1001-DROPOFF travel_time=32.91s reroutes=0 obstacles=0
+07:47:19 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:19 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.559, 5.038) route=T-T-1001-DROPOFF travel_time=32.97s reroutes=0 obstacles=0
+07:47:19 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:19 [INFO] edge_robot: [A*] robot=AMR-01 start=(3.0, 5.07) goal=(5.0, 5.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (3.0, 5.07)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    3
+  Path length: 4.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:19 [INFO] edge_robot: [AMR-01] STATE_TRANSITION PLANNING -> MOVING (intent=MOVE)
+07:47:19 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=3 path=[(3, 5), (4, 5), (5, 5)]...
+07:47:19 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=3
+07:47:19 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.00, 5.07) dist=1.00m desired_hdg=356.0° actual_hdg=343.6° align=0.98 progress=NO
+07:47:20 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.56, 5.03) dist=0.44m desired_hdg=356.0° actual_hdg=356.0° align=1.00 progress=YES
+07:47:20 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.67, 5.02) dist=0.33m desired_hdg=356.0° actual_hdg=356.0° align=1.00 progress=YES
+07:47:20 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.78, 5.01) dist=0.22m desired_hdg=356.1° actual_hdg=356.0° align=1.00 progress=YES
+07:47:20 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.11, 5.00) dist=0.89m desired_hdg=359.9° actual_hdg=180.5° align=-1.00 progress=YES
+07:47:20 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.22, 5.00) dist=0.78m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:20 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.33, 5.00) dist=0.67m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:20 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.44, 5.00) dist=0.56m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:20 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.56, 5.00) dist=0.44m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:20 [INFO] edge_robot: [AMR-01] P2P: AMR-01 ↔ AMR-02 connected
+07:47:20 [INFO] edge_robot: [AMR-01] P2P: AMR-01 ↔ AMR-03 connected
+07:47:20 [INFO] edge_robot: [AMR-01] P2P: AMR-01 ↔ AMR-04 connected
+07:47:21 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.67, 5.02) dist=0.33m desired_hdg=356.0° actual_hdg=356.0° align=1.00 progress=YES
+07:47:21 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.78, 5.01) dist=0.22m desired_hdg=356.0° actual_hdg=356.0° align=1.00 progress=YES
+07:47:21 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.90, 5.01) dist=1.10m desired_hdg=359.6° actual_hdg=356.0° align=1.00 progress=YES
+07:47:21 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.01, 5.01) dist=0.99m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:21 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.12, 5.01) dist=0.88m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:21 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.23, 5.00) dist=0.77m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:21 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.34, 5.00) dist=0.66m desired_hdg=359.7° actual_hdg=359.6° align=1.00 progress=YES
+07:47:21 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.45, 5.00) dist=0.55m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:21 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.564, 5.003) route=T-T-1001-DROPOFF travel_time=1.73s reroutes=0 obstacles=0
+07:47:21 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> PLANNING (intent=MOVE)
+07:47:21 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:21 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.564, 5.003) route=T-T-1001-DROPOFF travel_time=1.78s reroutes=0 obstacles=0
+07:47:21 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:21 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.564, 5.003) route=T-T-1001-DROPOFF travel_time=1.83s reroutes=0 obstacles=0
+07:47:21 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:21 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.564, 5.003) route=T-T-1001-DROPOFF travel_time=1.88s reroutes=0 obstacles=0
+07:47:21 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:21 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.564, 5.003) route=T-T-1001-DROPOFF travel_time=1.93s reroutes=0 obstacles=0
+07:47:21 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:21 [INFO] edge_robot: [A*] robot=AMR-01 start=(3.0, 5.07) goal=(5.0, 5.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (3.0, 5.07)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    3
+  Path length: 4.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:21 [INFO] edge_robot: [AMR-01] STATE_TRANSITION PLANNING -> MOVING (intent=MOVE)
+07:47:21 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=3 path=[(3, 5), (4, 5), (5, 5)]...
+07:47:21 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=3
+07:47:22 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.56, 5.03) dist=0.44m desired_hdg=356.0° actual_hdg=356.0° align=1.00 progress=YES
+07:47:22 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.67, 5.02) dist=0.33m desired_hdg=356.0° actual_hdg=356.0° align=1.00 progress=YES
+07:47:22 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.78, 5.01) dist=0.22m desired_hdg=356.1° actual_hdg=356.0° align=1.00 progress=YES
+07:47:22 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.11, 5.00) dist=0.89m desired_hdg=359.9° actual_hdg=180.5° align=-1.00 progress=YES
+07:47:22 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.22, 5.00) dist=0.78m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:22 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.33, 5.00) dist=0.67m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:22 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.44, 5.00) dist=0.56m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:22 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.56, 5.00) dist=0.44m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:23 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.67, 5.02) dist=0.33m desired_hdg=356.0° actual_hdg=356.0° align=1.00 progress=YES
+07:47:23 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.78, 5.02) dist=0.22m desired_hdg=355.9° actual_hdg=356.0° align=1.00 progress=YES
+07:47:23 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.89, 5.01) dist=1.11m desired_hdg=359.6° actual_hdg=356.0° align=1.00 progress=YES
+07:47:23 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.00, 5.01) dist=1.00m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:23 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.11, 5.01) dist=0.89m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:23 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.22, 5.00) dist=0.78m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:23 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.33, 5.00) dist=0.67m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:23 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.45, 5.00) dist=0.55m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:23 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.557, 5.003) route=T-T-1001-DROPOFF travel_time=1.72s reroutes=0 obstacles=0
+07:47:23 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> PLANNING (intent=MOVE)
+07:47:23 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:23 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.557, 5.003) route=T-T-1001-DROPOFF travel_time=1.77s reroutes=0 obstacles=0
+07:47:23 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:23 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.557, 5.003) route=T-T-1001-DROPOFF travel_time=1.82s reroutes=0 obstacles=0
+07:47:23 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:23 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.557, 5.003) route=T-T-1001-DROPOFF travel_time=1.87s reroutes=0 obstacles=0
+07:47:23 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:23 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.557, 5.003) route=T-T-1001-DROPOFF travel_time=1.93s reroutes=0 obstacles=0
+07:47:23 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:23 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.557, 5.003) route=T-T-1001-DROPOFF travel_time=1.98s reroutes=0 obstacles=0
+07:47:23 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:23 [INFO] edge_robot: [A*] robot=AMR-01 start=(3.03, 5.07) goal=(5.0, 5.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (3.03, 5.07)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    3
+  Path length: 4.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:23 [INFO] edge_robot: [AMR-01] STATE_TRANSITION PLANNING -> MOVING (intent=MOVE)
+07:47:23 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=3 path=[(3, 5), (4, 5), (5, 5)]...
+07:47:23 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=3
+07:47:24 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.59, 5.03) dist=0.41m desired_hdg=355.8° actual_hdg=355.9° align=1.00 progress=YES
+07:47:24 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.70, 5.02) dist=0.30m desired_hdg=355.8° actual_hdg=355.9° align=1.00 progress=YES
+07:47:24 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.81, 5.01) dist=0.19m desired_hdg=356.0° actual_hdg=355.9° align=1.00 progress=YES
+07:47:24 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.14, 5.00) dist=0.86m desired_hdg=359.9° actual_hdg=180.3° align=-1.00 progress=YES
+07:47:24 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.25, 5.00) dist=0.75m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:24 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.37, 5.00) dist=0.63m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:24 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.48, 5.00) dist=0.52m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:25 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.56, 5.03) dist=0.44m desired_hdg=356.1° actual_hdg=356.1° align=1.00 progress=YES
+07:47:25 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.67, 5.02) dist=0.33m desired_hdg=356.2° actual_hdg=356.1° align=1.00 progress=YES
+07:47:25 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.78, 5.01) dist=0.22m desired_hdg=356.1° actual_hdg=356.1° align=1.00 progress=YES
+07:47:25 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.89, 5.01) dist=1.11m desired_hdg=359.6° actual_hdg=356.1° align=1.00 progress=YES
+07:47:25 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.00, 5.01) dist=1.00m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:25 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.11, 5.01) dist=0.89m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:25 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.23, 5.00) dist=0.77m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:25 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.34, 5.00) dist=0.66m desired_hdg=359.7° actual_hdg=359.6° align=1.00 progress=YES
+07:47:25 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.45, 5.00) dist=0.55m desired_hdg=359.6° actual_hdg=359.6° align=1.00 progress=YES
+07:47:25 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.562, 5.003) route=T-T-1001-DROPOFF travel_time=1.63s reroutes=0 obstacles=0
+07:47:25 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> PLANNING (intent=MOVE)
+07:47:25 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:25 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.562, 5.003) route=T-T-1001-DROPOFF travel_time=1.68s reroutes=0 obstacles=0
+07:47:25 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:25 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.562, 5.003) route=T-T-1001-DROPOFF travel_time=1.73s reroutes=0 obstacles=0
+07:47:25 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:25 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.562, 5.003) route=T-T-1001-DROPOFF travel_time=1.78s reroutes=0 obstacles=0
+07:47:25 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:25 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.562, 5.003) route=T-T-1001-DROPOFF travel_time=1.83s reroutes=0 obstacles=0
+07:47:25 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:25 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.562, 5.003) route=T-T-1001-DROPOFF travel_time=1.88s reroutes=0 obstacles=0
+07:47:25 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:25 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.562, 5.003) route=T-T-1001-DROPOFF travel_time=1.93s reroutes=0 obstacles=0
+07:47:25 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:25 [INFO] edge_robot: [A*] robot=AMR-01 start=(3.24, 5.05) goal=(5.0, 5.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (3.24, 5.05)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    3
+  Path length: 4.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:25 [INFO] edge_robot: [AMR-01] STATE_TRANSITION PLANNING -> MOVING (intent=MOVE)
+07:47:25 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=3 path=[(3, 5), (4, 5), (5, 5)]...
+07:47:25 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=3
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.57, 5.03) dist=0.43m desired_hdg=356.2° actual_hdg=356.2° align=1.00 progress=YES
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.69, 5.02) dist=0.32m desired_hdg=356.2° actual_hdg=356.2° align=1.00 progress=YES
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.80, 5.01) dist=0.20m desired_hdg=356.3° actual_hdg=356.2° align=1.00 progress=YES
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.13, 5.00) dist=0.87m desired_hdg=359.9° actual_hdg=180.4° align=-1.00 progress=YES
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.24, 5.00) dist=0.76m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.35, 5.00) dist=0.65m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.46, 5.00) dist=0.54m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.58, 5.00) dist=0.42m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.69, 5.00) dist=0.31m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.80, 5.00) dist=0.20m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.24, 5.05) dist=1.76m desired_hdg=358.4° actual_hdg=295.3° align=0.45 progress=YES
+07:47:26 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.35, 5.05) dist=1.65m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:27 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.46, 5.04) dist=1.54m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:27 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.58, 5.04) dist=1.43m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:27 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.69, 5.04) dist=1.31m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:27 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.80, 5.03) dist=1.20m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:27 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.91, 5.03) dist=1.09m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:27 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.02, 5.03) dist=0.98m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:27 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.13, 5.03) dist=0.87m desired_hdg=358.3° actual_hdg=358.4° align=1.00 progress=YES
+07:47:27 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.24, 5.02) dist=0.76m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:27 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.36, 5.02) dist=0.65m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:27 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.47, 5.01) dist=0.53m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:27 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.58, 5.012) route=T-T-1001-DROPOFF travel_time=1.62s reroutes=0 obstacles=0
+07:47:27 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> PLANNING (intent=MOVE)
+07:47:27 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:27 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.58, 5.012) route=T-T-1001-DROPOFF travel_time=1.68s reroutes=0 obstacles=0
+07:47:27 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:27 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.58, 5.012) route=T-T-1001-DROPOFF travel_time=1.73s reroutes=0 obstacles=0
+07:47:27 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:27 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.58, 5.012) route=T-T-1001-DROPOFF travel_time=1.78s reroutes=0 obstacles=0
+07:47:27 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:27 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.58, 5.012) route=T-T-1001-DROPOFF travel_time=1.83s reroutes=0 obstacles=0
+07:47:27 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:27 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.58, 5.012) route=T-T-1001-DROPOFF travel_time=1.88s reroutes=0 obstacles=0
+07:47:27 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:27 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.58, 5.012) route=T-T-1001-DROPOFF travel_time=1.93s reroutes=0 obstacles=0
+07:47:27 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:27 [INFO] edge_robot: [A*] robot=AMR-01 start=(3.24, 5.05) goal=(5.0, 5.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (3.24, 5.05)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    3
+  Path length: 4.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:27 [INFO] edge_robot: [AMR-01] STATE_TRANSITION PLANNING -> MOVING (intent=MOVE)
+07:47:27 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=3 path=[(3, 5), (4, 5), (5, 5)]...
+07:47:27 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=3
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.57, 5.03) dist=0.43m desired_hdg=356.2° actual_hdg=356.2° align=1.00 progress=YES
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.69, 5.02) dist=0.32m desired_hdg=356.2° actual_hdg=356.2° align=1.00 progress=YES
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.79, 5.01) dist=0.21m desired_hdg=356.4° actual_hdg=356.2° align=1.00 progress=YES
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.13, 5.00) dist=0.87m desired_hdg=359.9° actual_hdg=180.4° align=-1.00 progress=YES
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.24, 5.00) dist=0.76m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.35, 5.00) dist=0.65m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.46, 5.00) dist=0.54m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.58, 5.00) dist=0.42m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.69, 5.00) dist=0.31m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.80, 5.00) dist=0.20m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.24, 5.05) dist=1.76m desired_hdg=358.4° actual_hdg=41.6° align=0.73 progress=YES
+07:47:28 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.35, 5.05) dist=1.65m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:29 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.46, 5.04) dist=1.54m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:29 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.58, 5.04) dist=1.43m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:29 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.69, 5.04) dist=1.31m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:29 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.80, 5.03) dist=1.20m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:29 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.91, 5.03) dist=1.09m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:29 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.02, 5.03) dist=0.98m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:29 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.13, 5.03) dist=0.87m desired_hdg=358.3° actual_hdg=358.4° align=1.00 progress=YES
+07:47:29 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.25, 5.02) dist=0.76m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:29 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.36, 5.02) dist=0.64m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:29 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.47, 5.01) dist=0.53m desired_hdg=358.4° actual_hdg=358.4° align=1.00 progress=YES
+07:47:29 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.012) route=T-T-1001-DROPOFF travel_time=1.62s reroutes=0 obstacles=0
+07:47:29 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> PLANNING (intent=MOVE)
+07:47:29 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:29 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.012) route=T-T-1001-DROPOFF travel_time=1.68s reroutes=0 obstacles=0
+07:47:29 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:29 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.012) route=T-T-1001-DROPOFF travel_time=1.73s reroutes=0 obstacles=0
+07:47:29 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:29 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.012) route=T-T-1001-DROPOFF travel_time=1.78s reroutes=0 obstacles=0
+07:47:29 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:29 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.012) route=T-T-1001-DROPOFF travel_time=1.83s reroutes=0 obstacles=0
+07:47:29 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:29 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.012) route=T-T-1001-DROPOFF travel_time=1.88s reroutes=0 obstacles=0
+07:47:29 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:29 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.012) route=T-T-1001-DROPOFF travel_time=1.93s reroutes=0 obstacles=0
+07:47:29 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:29 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.012) route=T-T-1001-DROPOFF travel_time=1.98s reroutes=0 obstacles=0
+07:47:29 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:29 [INFO] edge_robot: [A*] robot=AMR-01 start=(3.24, 5.05) goal=(5.0, 5.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (3.24, 5.05)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    3
+  Path length: 4.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:29 [INFO] edge_robot: [AMR-01] STATE_TRANSITION PLANNING -> MOVING (intent=MOVE)
+07:47:29 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=3 path=[(3, 5), (4, 5), (5, 5)]...
+07:47:29 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=3
+07:47:30 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.58, 5.03) dist=0.42m desired_hdg=356.2° actual_hdg=356.2° align=1.00 progress=YES
+07:47:30 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.69, 5.02) dist=0.31m desired_hdg=356.3° actual_hdg=356.2° align=1.00 progress=YES
+07:47:30 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.80, 5.01) dist=0.20m desired_hdg=356.2° actual_hdg=356.2° align=1.00 progress=YES
+07:47:30 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.13, 5.00) dist=0.87m desired_hdg=359.9° actual_hdg=180.4° align=-1.00 progress=YES
+07:47:30 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.25, 5.00) dist=0.76m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:30 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.36, 5.00) dist=0.64m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:30 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.47, 5.00) dist=0.53m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:30 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.58, 5.00) dist=0.42m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:30 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.69, 5.00) dist=0.31m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:31 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.80, 5.01) dist=0.20m desired_hdg=356.3° actual_hdg=356.2° align=1.00 progress=YES
+07:47:31 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.91, 5.01) dist=1.09m desired_hdg=359.7° actual_hdg=356.2° align=1.00 progress=YES
+07:47:31 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.02, 5.00) dist=0.98m desired_hdg=359.7° actual_hdg=359.7° align=1.00 progress=YES
+07:47:31 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.13, 5.00) dist=0.87m desired_hdg=359.7° actual_hdg=359.7° align=1.00 progress=YES
+07:47:31 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.25, 5.00) dist=0.76m desired_hdg=359.7° actual_hdg=359.7° align=1.00 progress=YES
+07:47:31 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.36, 5.00) dist=0.64m desired_hdg=359.7° actual_hdg=359.7° align=1.00 progress=YES
+07:47:31 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.47, 5.00) dist=0.53m desired_hdg=359.7° actual_hdg=359.7° align=1.00 progress=YES
+07:47:31 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.002) route=T-T-1001-DROPOFF travel_time=1.57s reroutes=0 obstacles=0
+07:47:31 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> PLANNING (intent=MOVE)
+07:47:31 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:31 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.002) route=T-T-1001-DROPOFF travel_time=1.62s reroutes=0 obstacles=0
+07:47:31 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:31 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.002) route=T-T-1001-DROPOFF travel_time=1.67s reroutes=0 obstacles=0
+07:47:31 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:31 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.002) route=T-T-1001-DROPOFF travel_time=1.72s reroutes=0 obstacles=0
+07:47:31 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:31 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.002) route=T-T-1001-DROPOFF travel_time=1.77s reroutes=0 obstacles=0
+07:47:31 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:31 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.002) route=T-T-1001-DROPOFF travel_time=1.82s reroutes=0 obstacles=0
+07:47:31 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:31 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.002) route=T-T-1001-DROPOFF travel_time=1.88s reroutes=0 obstacles=0
+07:47:31 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:31 [INFO] edge_robot: [AMR-01] [ROUTE_COMPLETE] at pos=(4.579, 5.002) route=T-T-1001-DROPOFF travel_time=1.93s reroutes=0 obstacles=0
+07:47:31 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 5.0) (route_id=T-T-1001-DROPOFF)
+07:47:31 [INFO] edge_robot: [A*] robot=AMR-01 start=(3.21, 5.05) goal=(5.0, 5.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (3.21, 5.05)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    3
+  Path length: 4.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:31 [INFO] edge_robot: [AMR-01] STATE_TRANSITION PLANNING -> MOVING (intent=MOVE)
+07:47:31 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=3 path=[(3, 5), (4, 5), (5, 5)]...
+07:47:31 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=3
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.55, 5.03) dist=0.45m desired_hdg=356.3° actual_hdg=356.4° align=1.00 progress=YES
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.66, 5.02) dist=0.34m desired_hdg=356.3° actual_hdg=356.4° align=1.00 progress=YES
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.77, 5.01) dist=0.23m desired_hdg=356.3° actual_hdg=356.4° align=1.00 progress=YES
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.10, 5.00) dist=0.90m desired_hdg=359.9° actual_hdg=180.5° align=-1.00 progress=YES
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.21, 5.00) dist=0.79m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.33, 5.00) dist=0.68m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.44, 5.00) dist=0.56m desired_hdg=359.9° actual_hdg=359.9° align=1.00 progress=YES
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.55, 5.00) dist=0.45m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.66, 5.00) dist=0.34m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.77, 5.00) dist=0.23m desired_hdg=0.0° actual_hdg=359.9° align=1.00 progress=YES
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.16, 5.03) dist=1.84m desired_hdg=359.1° actual_hdg=67.6° align=0.37 progress=YES
+07:47:32 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.27, 5.03) dist=1.73m desired_hdg=359.1° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.38, 5.03) dist=1.62m desired_hdg=359.1° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.49, 5.03) dist=1.51m desired_hdg=359.1° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.60, 5.02) dist=1.40m desired_hdg=359.1° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.71, 5.02) dist=1.29m desired_hdg=359.1° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.83, 5.02) dist=1.18m desired_hdg=359.1° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(3.94, 5.02) dist=1.06m desired_hdg=359.1° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.05, 5.02) dist=0.95m desired_hdg=359.0° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.16, 5.01) dist=0.84m desired_hdg=359.0° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.27, 5.01) dist=0.73m desired_hdg=359.1° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.38, 5.01) dist=0.62m desired_hdg=359.1° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.50, 5.01) dist=0.51m desired_hdg=359.1° actual_hdg=359.1° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot.tasks: [AMR-01] TASK_PICKED_UP task=T-1001 (Shelf: SHELF-02) at (5, 5) -> heading to (5, 15)
+07:47:33 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> PLANNING (intent=MOVE)
+07:47:33 [INFO] edge_robot: [AMR-01] GOAL_SET goal=(5.0, 15.0) (route_id=R-AMR-01-1788056253572)
+07:47:33 [INFO] edge_robot: [A*] robot=AMR-01 start=(4.607, 5.006) goal=(5.0, 15.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (4.607, 5.006)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    15
+  Path length: 28.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:33 [INFO] edge_robot: [AMR-01] STATE_TRANSITION PLANNING -> MOVING (intent=MOVE)
+07:47:33 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=15 path=[(5, 5), (4, 5), (3, 5), (3, 6), (3, 7)]...
+07:47:33 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=15
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.38, 5.00) dist=0.38m desired_hdg=180.6° actual_hdg=180.6° align=1.00 progress=YES
+07:47:33 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.27, 5.00) dist=0.27m desired_hdg=180.6° actual_hdg=180.6° align=1.00 progress=YES
+07:47:34 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.87, 5.00) dist=0.87m desired_hdg=180.1° actual_hdg=359.4° align=-1.00 progress=YES
+07:47:34 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.76, 5.00) dist=0.76m desired_hdg=180.1° actual_hdg=180.1° align=1.00 progress=YES
+07:47:34 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.64, 5.00) dist=0.64m desired_hdg=180.1° actual_hdg=180.1° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.41, 5.01) dist=0.59m desired_hdg=358.7° actual_hdg=358.8° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.53, 5.01) dist=0.47m desired_hdg=358.8° actual_hdg=358.8° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.64, 5.01) dist=0.36m desired_hdg=358.7° actual_hdg=358.8° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(3.75, 5.00) dist=0.25m desired_hdg=358.9° actual_hdg=358.8° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.86, 5.00) dist=0.86m desired_hdg=180.2° actual_hdg=358.8° align=-1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.75, 5.00) dist=0.75m desired_hdg=180.2° actual_hdg=180.2° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.64, 5.00) dist=0.64m desired_hdg=180.2° actual_hdg=180.2° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.53, 5.00) dist=0.53m desired_hdg=180.2° actual_hdg=180.2° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.42, 5.00) dist=0.42m desired_hdg=180.1° actual_hdg=180.2° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.30, 5.00) dist=0.30m desired_hdg=180.2° actual_hdg=180.2° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.19, 5.00) dist=0.19m desired_hdg=180.3° actual_hdg=180.2° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.08, 5.00) dist=1.00m desired_hdg=94.7° actual_hdg=180.2° align=0.08 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.07, 5.11) dist=0.89m desired_hdg=94.7° actual_hdg=94.7° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.06, 5.22) dist=0.78m desired_hdg=94.7° actual_hdg=94.7° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.05, 5.34) dist=0.67m desired_hdg=94.7° actual_hdg=94.7° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.04, 5.45) dist=0.55m desired_hdg=94.7° actual_hdg=94.7° align=1.00 progress=YES
+07:47:35 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.04, 5.56) dist=0.44m desired_hdg=94.7° actual_hdg=94.7° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.04, 5.68) dist=0.32m desired_hdg=98.1° actual_hdg=98.1° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.03, 5.79) dist=0.21m desired_hdg=98.0° actual_hdg=98.1° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.01, 5.91) dist=1.09m desired_hdg=90.7° actual_hdg=98.1° align=0.99 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.01, 6.02) dist=0.98m desired_hdg=90.7° actual_hdg=90.7° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.01, 6.13) dist=0.87m desired_hdg=90.7° actual_hdg=90.7° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.01, 6.24) dist=0.76m desired_hdg=90.7° actual_hdg=90.7° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.01, 6.35) dist=0.65m desired_hdg=90.7° actual_hdg=90.7° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.01, 6.46) dist=0.54m desired_hdg=90.7° actual_hdg=90.7° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.00, 6.58) dist=0.42m desired_hdg=90.7° actual_hdg=90.7° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.00, 6.69) dist=0.31m desired_hdg=90.7° actual_hdg=90.7° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.00, 6.80) dist=0.20m desired_hdg=90.6° actual_hdg=90.7° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.00, 6.92) dist=1.09m desired_hdg=90.1° actual_hdg=90.7° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.00, 7.03) dist=0.97m desired_hdg=90.1° actual_hdg=90.1° align=1.00 progress=YES
+07:47:36 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.00, 7.14) dist=0.86m desired_hdg=90.1° actual_hdg=90.1° align=1.00 progress=YES
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:37 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.81m <= 0.85m
+07:47:37 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:37 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.79m <= 0.85m
+07:47:37 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:37 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.78m <= 0.85m
+07:47:37 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:37 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.79m <= 0.85m
+07:47:37 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:37 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.81m <= 0.85m
+07:47:37 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:37 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.85m <= 0.85m
+07:47:37 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:37 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:37 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.51, 5.01) dist=3.03m desired_hdg=99.7° actual_hdg=273.2° align=-0.99 progress=NO
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:38 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.79m <= 0.85m
+07:47:38 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:38 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.73m <= 0.85m
+07:47:38 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:38 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.69m <= 0.85m
+07:47:38 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:38 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:47:38 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:38 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.65m <= 0.85m
+07:47:38 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:38 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:47:38 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:38 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.69m <= 0.85m
+07:47:38 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:38 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.73m <= 0.85m
+07:47:38 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:38 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:38 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 8) pos=(3.70, 5.01) dist=3.07m desired_hdg=103.2° actual_hdg=271.8° align=-0.98 progress=NO
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:39 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.85m <= 0.85m
+07:47:39 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:39 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.76m <= 0.85m
+07:47:39 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:39 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.68m <= 0.85m
+07:47:39 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:39 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.62m <= 0.85m
+07:47:39 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:39 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.57m <= 0.85m
+07:47:39 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:39 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.53m <= 0.85m
+07:47:39 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:39 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.52m <= 0.85m
+07:47:39 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:39 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.53m <= 0.85m
+07:47:39 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:39 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.56m <= 0.85m
+07:47:39 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:39 [WARNING] edge_robot: [AMR-01] STALLED at pos=(3.88, 5.01) target=(3.0, 8.0) dist=3.12m (no progress for 3.0s) -> Triggering Replan
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> BLOCKED (intent=WAIT)
+07:47:39 [INFO] edge_robot: [A*] robot=AMR-01 start=(3.88, 5.01) goal=(5.0, 15.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (3.88, 5.01)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    14
+  Path length: 26.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:39 [INFO] edge_robot: [AMR-01] STATE_TRANSITION BLOCKED -> MOVING (intent=MOVE)
+07:47:39 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=14 path=[(4, 5), (3, 5), (3, 6), (3, 7), (3, 8)]...
+07:47:39 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=14
+07:47:39 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.88, 5.01) dist=0.88m desired_hdg=180.7° actual_hdg=271.1° align=-0.01 progress=YES
+07:47:40 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.77, 5.01) dist=0.77m desired_hdg=180.7° actual_hdg=180.7° align=1.00 progress=YES
+07:47:40 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.66, 5.01) dist=0.66m desired_hdg=180.6° actual_hdg=180.7° align=1.00 progress=YES
+07:47:40 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.54, 5.01) dist=0.54m desired_hdg=180.6° actual_hdg=180.7° align=1.00 progress=YES
+07:47:40 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.43, 5.00) dist=0.43m desired_hdg=180.7° actual_hdg=180.7° align=1.00 progress=YES
+07:47:40 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.32, 5.00) dist=0.32m desired_hdg=180.7° actual_hdg=180.7° align=1.00 progress=YES
+07:47:40 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.21, 5.00) dist=0.21m desired_hdg=180.5° actual_hdg=180.7° align=1.00 progress=YES
+07:47:40 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.88, 5.00) dist=0.88m desired_hdg=180.0° actual_hdg=359.9° align=-1.00 progress=YES
+07:47:40 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.77, 5.00) dist=0.77m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:40 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.66, 5.00) dist=0.66m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:40 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.54, 5.00) dist=0.54m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.51, 5.00) dist=0.51m desired_hdg=180.6° actual_hdg=180.5° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.40, 5.00) dist=0.40m desired_hdg=180.6° actual_hdg=180.5° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.28, 5.00) dist=0.28m desired_hdg=180.6° actual_hdg=180.5° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.17, 5.00) dist=1.01m desired_hdg=99.8° actual_hdg=180.5° align=0.16 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.15, 5.11) dist=0.90m desired_hdg=99.8° actual_hdg=99.8° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.13, 5.22) dist=0.79m desired_hdg=99.8° actual_hdg=99.8° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.12, 5.33) dist=0.68m desired_hdg=99.8° actual_hdg=99.8° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.10, 5.44) dist=0.57m desired_hdg=99.8° actual_hdg=99.8° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.08, 5.55) dist=0.45m desired_hdg=99.8° actual_hdg=99.8° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.06, 5.66) dist=0.34m desired_hdg=99.7° actual_hdg=99.8° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.04, 5.77) dist=0.23m desired_hdg=99.7° actual_hdg=99.8° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.02, 5.88) dist=1.12m desired_hdg=91.0° actual_hdg=99.8° align=0.99 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.02, 6.00) dist=1.01m desired_hdg=91.0° actual_hdg=91.0° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.02, 6.11) dist=0.89m desired_hdg=91.0° actual_hdg=91.0° align=1.00 progress=YES
+07:47:41 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.01, 6.22) dist=0.78m desired_hdg=91.0° actual_hdg=91.0° align=1.00 progress=YES
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:42 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.76m <= 0.85m
+07:47:42 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:42 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.65m <= 0.85m
+07:47:42 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:42 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.55m <= 0.85m
+07:47:42 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:42 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.45m <= 0.85m
+07:47:42 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:42 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.36m <= 0.85m
+07:47:42 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:42 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.28m <= 0.85m
+07:47:42 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:42 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.23m <= 0.85m
+07:47:42 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:42 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.23m <= 0.85m
+07:47:42 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:42 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.28m <= 0.85m
+07:47:42 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:42 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(4.47, 5.00) dist=2.48m desired_hdg=126.3° actual_hdg=270.6° align=-0.81 progress=NO
+07:47:42 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:43 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.78m <= 0.85m
+07:47:43 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:43 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.67m <= 0.85m
+07:47:43 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:43 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.57m <= 0.85m
+07:47:43 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:43 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.47m <= 0.85m
+07:47:43 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:43 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.37m <= 0.85m
+07:47:43 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:43 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.29m <= 0.85m
+07:47:43 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:43 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.23m <= 0.85m
+07:47:43 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:43 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.22m <= 0.85m
+07:47:43 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:43 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.26m <= 0.85m
+07:47:43 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:43 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(4.50, 5.00) dist=2.50m desired_hdg=126.9° actual_hdg=270.6° align=-0.81 progress=NO
+07:47:43 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:44 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.79m <= 0.85m
+07:47:44 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:44 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.69m <= 0.85m
+07:47:44 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:44 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.58m <= 0.85m
+07:47:44 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:44 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.48m <= 0.85m
+07:47:44 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:44 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.38m <= 0.85m
+07:47:44 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:44 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.29m <= 0.85m
+07:47:44 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:44 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.22m <= 0.85m
+07:47:44 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:44 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.20m <= 0.85m
+07:47:44 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:44 [WARNING] edge_robot: [AMR-01] STALLED at pos=(4.6, 5.0) target=(3.0, 7.0) dist=2.56m (no progress for 3.0s) -> Triggering Replan
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> BLOCKED (intent=WAIT)
+07:47:44 [INFO] edge_robot: [A*] robot=AMR-01 start=(4.6, 5.0) goal=(5.0, 15.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (4.6, 5.0)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    15
+  Path length: 28.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:44 [INFO] edge_robot: [AMR-01] STATE_TRANSITION BLOCKED -> MOVING (intent=MOVE)
+07:47:44 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=15 path=[(5, 5), (4, 5), (3, 5), (3, 6), (3, 7)]...
+07:47:44 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=15
+07:47:44 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.60, 5.00) dist=0.60m desired_hdg=180.0° actual_hdg=270.6° align=-0.01 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.49, 5.00) dist=0.49m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.38, 5.00) dist=0.38m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.26, 5.00) dist=0.26m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.83, 5.00) dist=0.83m desired_hdg=180.0° actual_hdg=0.0° align=-1.00 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.72, 5.00) dist=0.72m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.61, 5.00) dist=0.61m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.50, 5.00) dist=0.50m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.38, 5.00) dist=0.38m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.27, 5.00) dist=0.27m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(4.16, 5.00) dist=1.16m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(4.05, 5.00) dist=1.05m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:45 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.94, 5.00) dist=0.94m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.89, 5.00) dist=0.89m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.78, 5.00) dist=0.78m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.67, 5.00) dist=0.67m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.56, 5.00) dist=0.56m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.45, 5.00) dist=0.45m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.34, 5.00) dist=0.34m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.22, 5.00) dist=0.22m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.11, 5.00) dist=1.01m desired_hdg=96.4° actual_hdg=180.0° align=0.11 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.10, 5.11) dist=0.90m desired_hdg=96.5° actual_hdg=96.5° align=1.00 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.09, 5.22) dist=0.78m desired_hdg=96.4° actual_hdg=96.5° align=1.00 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.08, 5.33) dist=0.67m desired_hdg=96.5° actual_hdg=96.5° align=1.00 progress=YES
+07:47:46 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.06, 5.44) dist=0.56m desired_hdg=96.5° actual_hdg=96.5° align=1.00 progress=YES
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:47 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.76m <= 0.85m
+07:47:47 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:47 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.67m <= 0.85m
+07:47:47 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:47 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.60m <= 0.85m
+07:47:47 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:47 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.53m <= 0.85m
+07:47:47 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:47 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.49m <= 0.85m
+07:47:47 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:47 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.46m <= 0.85m
+07:47:47 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:47 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.47m <= 0.85m
+07:47:47 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:47 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(4.92, 5.00) dist=2.16m desired_hdg=152.5° actual_hdg=12.7° align=-0.76 progress=NO
+07:47:47 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:48 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.76m <= 0.85m
+07:47:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:48 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.68m <= 0.85m
+07:47:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:48 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.60m <= 0.85m
+07:47:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:48 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.54m <= 0.85m
+07:47:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:48 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.49m <= 0.85m
+07:47:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:48 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.46m <= 0.85m
+07:47:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:48 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.47m <= 0.85m
+07:47:48 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:48 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:48 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(4.92, 5.00) dist=2.16m desired_hdg=152.5° actual_hdg=53.0° align=-0.16 progress=NO
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:49 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.76m <= 0.85m
+07:47:49 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:49 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.68m <= 0.85m
+07:47:49 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:49 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.60m <= 0.85m
+07:47:49 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:49 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.54m <= 0.85m
+07:47:49 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:49 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.49m <= 0.85m
+07:47:49 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:49 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.46m <= 0.85m
+07:47:49 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:49 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.47m <= 0.85m
+07:47:49 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:49 [WARNING] edge_robot: [AMR-01] STALLED at pos=(3.732, 5.619) target=(3.0, 6.0) dist=0.83m (no progress for 3.0s) -> Triggering Replan
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> BLOCKED (intent=WAIT)
+07:47:49 [INFO] edge_robot: [A*] robot=AMR-01 start=(4.92, 5.0) goal=(5.0, 15.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (4.92, 5.0)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    15
+  Path length: 28.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:49 [INFO] edge_robot: [AMR-01] STATE_TRANSITION BLOCKED -> MOVING (intent=MOVE)
+07:47:49 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=15 path=[(5, 5), (4, 5), (3, 5), (3, 6), (3, 7)]...
+07:47:49 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=15
+07:47:49 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.92, 5.00) dist=0.92m desired_hdg=180.0° actual_hdg=56.7° align=-0.55 progress=YES
+07:47:49 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.81, 5.00) dist=0.81m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.70, 5.00) dist=0.70m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.59, 5.00) dist=0.59m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.47, 5.00) dist=0.47m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.36, 5.00) dist=0.36m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.25, 5.00) dist=0.25m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(5, 5) pos=(4.81, 5.00) dist=0.19m desired_hdg=0.0° actual_hdg=0.0° align=1.00 progress=YES
+07:47:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.92, 5.00) dist=0.92m desired_hdg=180.0° actual_hdg=0.0° align=-1.00 progress=YES
+07:47:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.81, 5.00) dist=0.81m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.70, 5.00) dist=0.70m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.59, 5.00) dist=0.59m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:50 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.48, 5.00) dist=0.48m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.36, 5.00) dist=0.36m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.25, 5.00) dist=0.25m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(4.14, 5.00) dist=1.14m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(4.02, 5.00) dist=1.02m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.91, 5.00) dist=0.91m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.80, 5.00) dist=0.80m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.69, 5.00) dist=0.69m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.58, 5.00) dist=0.58m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.46, 5.00) dist=0.46m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.35, 5.00) dist=0.35m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.24, 5.00) dist=0.24m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.13, 5.00) dist=1.01m desired_hdg=97.4° actual_hdg=180.0° align=0.13 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.12, 5.11) dist=0.90m desired_hdg=97.4° actual_hdg=97.4° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.10, 5.22) dist=0.78m desired_hdg=97.4° actual_hdg=97.4° align=1.00 progress=YES
+07:47:51 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.09, 5.34) dist=0.67m desired_hdg=97.4° actual_hdg=97.4° align=1.00 progress=YES
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:52 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.80m <= 0.85m
+07:47:52 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:52 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.71m <= 0.85m
+07:47:52 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:52 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.64m <= 0.85m
+07:47:52 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:52 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.57m <= 0.85m
+07:47:52 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:52 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.52m <= 0.85m
+07:47:52 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:52 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.49m <= 0.85m
+07:47:52 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:52 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.48m <= 0.85m
+07:47:52 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:52 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.50m <= 0.85m
+07:47:52 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:52 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(4.71, 5.00) dist=1.98m desired_hdg=149.7° actual_hdg=83.8° align=0.41 progress=NO
+07:47:52 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:53 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.84m <= 0.85m
+07:47:53 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:53 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.75m <= 0.85m
+07:47:53 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:53 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.67m <= 0.85m
+07:47:53 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:53 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.60m <= 0.85m
+07:47:53 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:53 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.55m <= 0.85m
+07:47:53 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:53 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.52m <= 0.85m
+07:47:53 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:53 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.50m <= 0.85m
+07:47:53 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:53 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.52m <= 0.85m
+07:47:53 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:53 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:53 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(4.61, 5.06) dist=1.87m desired_hdg=149.7° actual_hdg=149.7° align=1.00 progress=NO
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:54 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.84m <= 0.85m
+07:47:54 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:54 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.75m <= 0.85m
+07:47:54 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:54 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.67m <= 0.85m
+07:47:54 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:54 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.61m <= 0.85m
+07:47:54 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:54 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.55m <= 0.85m
+07:47:54 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:54 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.52m <= 0.85m
+07:47:54 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:54 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.50m <= 0.85m
+07:47:54 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:54 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.52m <= 0.85m
+07:47:54 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:54 [WARNING] edge_robot: [AMR-01] STALLED at pos=(4.68, 5.0) target=(3.0, 6.0) dist=1.96m (no progress for 3.0s) -> Triggering Replan
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> BLOCKED (intent=WAIT)
+07:47:54 [INFO] edge_robot: [A*] robot=AMR-01 start=(4.68, 5.0) goal=(5.0, 15.0) obstacles=214
+══════════════════════════════════════════════════════════════════════
+📋 PATH VALIDATION REPORT | Task: T-1001 | Robot: AMR-01
+  Start:       (4.68, 5.0)
+  Pickup:      (5, 5)
+  Dropoff:     (5, 15)
+  A* nodes:    15
+  Path length: 28.00m
+  Static obstacles checked:   214
+  Inflated obstacles checked: 214
+  Route valid: YES
+  Minimum rack clearance:     2.00m
+  Minimum wall clearance:     6.00m
+  Dynamic conflicts:          NONE
+  Final route:                SAFE
+══════════════════════════════════════════════════════════════════════
+07:47:54 [INFO] edge_robot: [AMR-01] STATE_TRANSITION BLOCKED -> MOVING (intent=MOVE)
+07:47:54 [INFO] edge_robot: [AMR-01] [ROUTE_VALID] robot=AMR-01 task=T-1001 waypoints=15 path=[(5, 5), (4, 5), (3, 5), (3, 6), (3, 7)]...
+07:47:54 [INFO] edge_robot.gateway: [PATH_SENT] robot=AMR-01 gateway=8001 waypoints=15
+07:47:54 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.68, 5.00) dist=0.68m desired_hdg=180.0° actual_hdg=84.4° align=-0.10 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.57, 5.00) dist=0.57m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.46, 5.00) dist=0.46m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.34, 5.00) dist=0.34m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.23, 5.00) dist=0.23m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.90, 5.00) dist=0.90m desired_hdg=180.0° actual_hdg=0.0° align=-1.00 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.79, 5.00) dist=0.79m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.68, 5.00) dist=0.68m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.57, 5.00) dist=0.57m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.46, 5.00) dist=0.46m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.34, 5.00) dist=0.34m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(4, 5) pos=(4.23, 5.00) dist=0.23m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(4.31, 5.00) dist=1.31m desired_hdg=180.0° actual_hdg=88.7° align=-0.02 progress=YES
+07:47:55 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(4.20, 5.00) dist=1.20m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(4.09, 5.00) dist=1.09m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.97, 5.00) dist=0.97m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.86, 5.00) dist=0.86m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.75, 5.00) dist=0.75m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.64, 5.00) dist=0.64m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.53, 5.00) dist=0.53m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.42, 5.00) dist=0.42m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.30, 5.00) dist=0.30m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 5) pos=(3.19, 5.00) dist=0.19m desired_hdg=180.0° actual_hdg=180.0° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.08, 5.00) dist=1.00m desired_hdg=94.6° actual_hdg=180.0° align=0.08 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.07, 5.11) dist=0.89m desired_hdg=94.6° actual_hdg=94.6° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.06, 5.22) dist=0.78m desired_hdg=94.6° actual_hdg=94.6° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.05, 5.33) dist=0.67m desired_hdg=94.5° actual_hdg=94.6° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.04, 5.44) dist=0.56m desired_hdg=94.6° actual_hdg=94.6° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.04, 5.55) dist=0.45m desired_hdg=94.6° actual_hdg=94.6° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.03, 5.67) dist=0.33m desired_hdg=94.6° actual_hdg=94.6° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 6) pos=(3.02, 5.78) dist=0.22m desired_hdg=94.6° actual_hdg=94.6° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(4.12, 5.00) dist=2.29m desired_hdg=119.2° actual_hdg=89.3° align=0.87 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(4.07, 5.10) dist=2.18m desired_hdg=119.2° actual_hdg=119.2° align=1.00 progress=YES
+07:47:56 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:56 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.80m <= 0.85m
+07:47:57 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(4.01, 5.20) dist=2.07m desired_hdg=119.2° actual_hdg=119.2° align=1.00 progress=YES
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:57 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.71m <= 0.85m
+07:47:57 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.96, 5.29) dist=1.96m desired_hdg=119.3° actual_hdg=119.2° align=1.00 progress=YES
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:57 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.62m <= 0.85m
+07:47:57 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.90, 5.39) dist=1.84m desired_hdg=119.2° actual_hdg=119.2° align=1.00 progress=YES
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:57 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.53m <= 0.85m
+07:47:57 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.85, 5.49) dist=1.73m desired_hdg=119.2° actual_hdg=119.2° align=1.00 progress=YES
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:57 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.46m <= 0.85m
+07:47:57 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.79, 5.59) dist=1.61m desired_hdg=119.2° actual_hdg=119.2° align=1.00 progress=YES
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:57 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.41m <= 0.85m
+07:47:57 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.73, 5.69) dist=1.50m desired_hdg=119.2° actual_hdg=119.2° align=1.00 progress=YES
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:57 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.38m <= 0.85m
+07:47:57 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.68, 5.79) dist=1.39m desired_hdg=119.3° actual_hdg=119.2° align=1.00 progress=YES
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:57 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.39m <= 0.85m
+07:47:57 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.62, 5.88) dist=1.28m desired_hdg=119.3° actual_hdg=119.2° align=1.00 progress=YES
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:57 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.43m <= 0.85m
+07:47:57 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:57 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.57, 5.98) dist=1.17m desired_hdg=119.2° actual_hdg=119.2° align=1.00 progress=YES
+07:47:57 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:58 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.81m <= 0.85m
+07:47:58 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:58 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.73m <= 0.85m
+07:47:58 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:58 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.65m <= 0.85m
+07:47:58 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:58 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.58m <= 0.85m
+07:47:58 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:58 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.52m <= 0.85m
+07:47:58 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:58 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.49m <= 0.85m
+07:47:58 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:58 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.48m <= 0.85m
+07:47:58 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:58 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.50m <= 0.85m
+07:47:58 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:58 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.54m <= 0.85m
+07:47:58 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:58 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.46, 6.01) dist=1.09m desired_hdg=115.2° actual_hdg=115.2° align=1.00 progress=YES
+07:47:58 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:59 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.78m <= 0.85m
+07:47:59 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:59 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.71m <= 0.85m
+07:47:59 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:59 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.65m <= 0.85m
+07:47:59 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:59 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.61m <= 0.85m
+07:47:59 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:59 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.59m <= 0.85m
+07:47:59 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:59 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.59m <= 0.85m
+07:47:59 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:59 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.61m <= 0.85m
+07:47:59 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:59 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.64m <= 0.85m
+07:47:59 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:59 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.36, 6.04) dist=1.02m desired_hdg=110.5° actual_hdg=110.6° align=1.00 progress=YES
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:47:59 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.70m <= 0.85m
+07:47:59 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:47:59 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:48:00 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.83m <= 0.85m
+07:48:00 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:48:00 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.77m <= 0.85m
+07:48:00 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:48:00 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.72m <= 0.85m
+07:48:00 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:48:00 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.68m <= 0.85m
+07:48:00 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:48:00 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:48:00 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:48:00 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.66m <= 0.85m
+07:48:00 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:48:00 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.68m <= 0.85m
+07:48:00 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION MOVING -> EMERGENCY_STOP (intent=STOP)
+07:48:00 [WARNING] edge_robot: [AMR-01] SAFETY_STOP min_obstacle_distance=0.71m <= 0.85m
+07:48:00 [INFO] edge_robot: [AMR-01] MOVEMENT_START robot=AMR-01 task=T-1001 pickup=SHELF-02 dropoff=SHELF-04 reason=ACTIVE_TASK
+07:48:00 [INFO] edge_robot: [AMR-01] [EXEC_DIAG] wp=(3, 7) pos=(3.29, 6.06) dist=0.98m desired_hdg=107.2° actual_hdg=107.2° align=1.00 progress=YES
+07:48:00 [INFO] edge_robot: [AMR-01] STATE_TRANSITION EMERGENCY_STOP -> MOVING (intent=MOVE)
